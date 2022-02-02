@@ -1,0 +1,50 @@
+  201  grep bowers AAA
+  202  grep Bowers AAA
+  203  grep Bowers Biblioteca_da_Cidade
+  204  grep Bowers Delta_SkyMiles
+  205  grep Bowers Museu_da_História_do_Bash
+  206  history
+  207  ls
+  208  cd ..
+  209  ls
+  210  grep Maher pessoas
+  211  grep help
+  212  grep -help
+  213  cd aulas-labenu/assassinato-na-linha-de-comando
+  214  cd misterio
+  215  grep -C 2 azul automoveis
+  216  grep -i "annabel" automoveis
+  217  grep -C 2 "azul" automoveis
+  218  grep "Azul" -C 2 automoveis
+  219  head pessoas
+  220  ls
+  221  grep -A 5 L337 automoveis
+  222  grep Annabel pessoas
+  223  cd rua
+  224  cd ruas
+  225  head  -n176 Rua_Haley
+  226  cd ..
+  227  head -n 20 pessoas
+  228  grep Annabel pessoas
+  229  ls
+  230  grep -A 5 L337 automoveis
+  231  ls
+  232  cd ruas
+  233  ls
+  234  head -n 173 Rua_Mattapan | tail -n 1
+  235  cd ..
+  236  ls
+  237  cd asssociacoes
+  238  cd associacoes
+  239  ls
+  240  grep Bowers AAA
+  241  history
+  242  cd ..
+  243  head automoveis
+  244  ls
+  245  cd entrevistas
+  246  ls
+  247  cat entrevista-14153840
+  248  cat entrevista-9437737
+  249  history
+  250  history 50 > history.txt

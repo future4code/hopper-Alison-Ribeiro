@@ -1,0 +1,170 @@
+Resumido:
+
+cd aulas-labenu/assassinato-na-linha-de-comando
+ls
+cat inicio
+cd misterio
+ls
+grep PISTA cena-do-crime
+grep Annabel automoveis
+grep Annabel pessoas
+head pessoas
+tail pessoas
+ grep -B 3 Sun automoveis
+ grep -A 3 Sun automoveis
+ grep -B 3 Church automoveis
+ grep -A 3 Church automoveis
+ls
+cd ruas
+ls
+ head -n 40 Vila_Hart
+cd ..
+ls
+cd entrevistas
+ls
+cat entrevista-47246024
+cd ..
+cd ruas
+$ cat entrevista-699607
+cd ..
+ls
+grep -B 2 Azul automoveis
+grep -A 5 L337QE9 automoveis
+grep -A 5 L337539 automoveis
+grep -A 5 L337369 automoveis
+grep -A 5 L337DV9 automoveis
+grep -A 5 L3375A9 automoveis
+grep -A 5 L337WR9 automoveis
+ls
+grep Germuska pessoas
+grep Bowers pessoas
+grep Maher pessoas
+cd ruas
+head -n 275 Rua_Plainfield
+head -n 284 Travessa_Dunstable
+cd ..
+ls
+cd entrevistas
+ls
+cat entrevista-29741223
+cat entrevista-9620713
+cd ..
+ls
+cd associacoes
+ls
+grep Bowers AAA
+grep Bowers Biblioteca_da_Cidade
+grep Bowers Delta_SkyMiles
+grep Bowers Museu_da_História_do_Bash
+
+History:
+$ history
+   98  pwd
+   99  cd aulas-labenu/assassinato-na-linha-de-comando
+  100  cat inicio
+  101  ls
+  102  cd misterio
+  103  ls
+  104  ls
+  105  cat cena-do-crime
+  106  grep pista
+  107  grep pista cena-do-crime
+  108  grep -A 2 pista cena-do-crime
+  109  cd ..
+  110  ls
+  111  cat inicio
+  112  cd misterio
+  113  ls
+  114  grep PISTA cena-do-crime
+  115  ls
+  116  head cena-do-crime
+  117  tail cena-do-crime
+  118  head automoveis
+  119  tail automoveis
+  120  cat automoveis
+  121  grep 1,83 automoveis
+  122  cat pessoas
+  123  cd entrevistas
+  124  ls
+  125  cd ..
+  126  grep PISTAS cena-do-crime
+  127  grep PISTA cena-do-crime
+  128  grap -B 2 PISTA cena-do-crime
+  129  grep entrevista cena-do-crime
+  130  grep Entrevista cena-do-crime
+  131  cat cena-do-crime
+  132  grep -AB 3 Annabel automoveis
+  133  grep Annabel automoveis
+  134  grep -B 3 Church
+  135  grep -B 3 Church automoveis
+  136  grep Annabel pessoas
+  137  head pessoas
+  138  tail pessoas
+  139  grep -B 3 Sun automoveis
+  140  grep -A 3 Sun automoveis
+  141  grep -B 3 Church automoveis
+  142  grep -A 3 Church
+  143  grep -A 3 Church automoveis
+  144  ls
+  145  cd ruas
+  146  ls
+  147  head Vila_Hart
+  148  head -n 40 Vila_Hart
+  149  ls
+  150  cd ..
+  151  ls
+  152  cd entrevistas
+  153  ls
+  154  cat entrevista-47246024
+  155  cd ..
+  156  ls
+  157  cd ruas
+  158  ls
+  159  head -n 179 Vila_Buckingham
+  160  cd ..
+  161  ls
+  162  cd entrevistass
+  163  cd entrevistas
+  164  ls
+  165  cat entrevista-699607
+  166  cd ..
+  167  ls
+  168  grep L337 automoveis
+  169  grep -A 3 L337ZR9 automoveis
+  170  grep -B 2 azul automoveis
+  171  grep -B 2 Azul automoveis
+  172  grep -A 5 L337QE9 automoveis
+  173  grep -A 5 L337QE9 automoveis
+  174  grep -A 5 L337539 automoveis
+  175  grep -A 5 L337369 automoveis
+  176  grep -A 5 L337DV9 automoveis
+  177  grep -A 5 L3375A9 automoveis
+  178  grep -A 5 L337WR9 automoveis
+  179  ls
+  180  grep Gremuska pessoas
+  181  grep Germuska pessoas
+  182  grep Bowers pessoas
+  183  grep Maher pessoas
+  184  cd ruas
+  185  ls
+  186  head -n 275 Rua_Plainfield
+  187  head -n 284 Travessa_Dunstable
+  188  ls
+  189  cd ..
+  190  ls
+  191  cd enntrevistas
+  192  cd entrevistas
+  193  ls
+  194  cat entrevista-29741223
+  195  cat entrevista-9620713
+  196  ls
+  197  cd ..
+  198  ls
+  199  cd associacoes
+  200  ls
+  201  grep bowers AAA
+  202  grep Bowers AAA
+  203  grep Bowers Biblioteca_da_Cidade
+  204  grep Bowers Delta_SkyMiles
+  205  grep Bowers Museu_da_História_do_Bash
+  206  history
