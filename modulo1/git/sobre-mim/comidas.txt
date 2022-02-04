@@ -1,0 +1,7 @@
+Tipos de culinárias:
+- Japonesa
+- Chinesa
+- Nordestina
+- Mineira
+- Italiana
+- Fast food
