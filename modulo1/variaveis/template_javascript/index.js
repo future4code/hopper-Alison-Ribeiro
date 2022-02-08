@@ -30,3 +30,9 @@ a = b
 b = c
 console.log("O novo valor de a é ", a)
 console.log("O novo valor de b é ", b)
+
+// Desafio
+let a1 = prompt("Digite um número")
+let b1 = prompt("Digite outro número")
+console.log("A soma dos números é: ", Number(a1)+Number(b1))
+console.log("A multiplicação dos números: ", Number(a1)*Number(b1))
