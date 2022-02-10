@@ -71,17 +71,36 @@ console.log("O primeiro número é divisível pelo segundo?", ((numero1 % numero
 console.log("O segundo número é divisível pelo primeiro?", ((numero2 % numero1) == 0))
 */
 
-/*
-// Desafio 1
-let grausCelsius
-let grausFahren
-let grausKelvin
-let grausKelvinConvF = ((grausKelvin - 273,15)*(1.8) + 32)
-let grausKelvinConvC = (grausKelvin - 273,15)
-let grausCelsiusConvK = (grausCelsius + 273,15)
-let grausCelsiusConvF = ((grausCelsius * (1,8)) + 32)
-let grausFahrenConvC = ((grausFahren - 32) * 5/9)
-let grausFahrenConvK = ((grausFahren - 32) * 5/9 + 273,15)
 
-console.log("Convertendo 77°F em Kelvin", grausFahrenConvK)
+// Desafio 1
+let grausCelsius = 0
+let grausFahren = 0
+let grausKelvin = 0
+
+/*
+let grausKelvinConvF = ((grausKelvin - 273.15)*(1.8) + 32)
+let grausKelvinConvC = (grausKelvin - 273.15)
+let grausCelsiusConvK = (grausCelsius + 273.15)
+let grausCelsiusConvF = ((grausCelsius * (1.8)) + 32)
+let grausFahrenConvC = ((grausFahren - 32) * 5/9)
+let grausFahrenConvK = ((grausFahren - 32) * 5/9 + 273.15)
 */
+// Desafio 1 - a)
+grausFahren = 77
+let grausFahrenConvK = ((grausFahren - 32) * 5/9 + 273.15)
+console.log("Convertendo 77°F em Kelvin", grausFahrenConvK, "°K")
+
+grausCelsius = 80
+let grausCelsiusConvF = ((grausCelsius * (1.8)) + 32)
+console.log("Convertendo 80°C em Fahrenhein", grausCelsiusConvF, "°F")
+
+grausCelsius = 30
+
+let grausCelsiusConvK = (grausCelsius + 273.15)
+grausCelsiusConvF = ((grausCelsius * (1.8)) + 32)
+console.log("Convertendo 30°C em Fahrenhein e Kelvin", grausCelsiusConvF, "°F", grausCelsiusConvK, "°K")
+
+grausCelsius = Number(prompt("Digite quantos graus Ceusius deseja converte para Fahrenhein e Keiln:"))
+grausCelsiusConvK = (grausCelsius + 273.15)
+grausCelsiusConvF = ((grausCelsius * (1.8)) + 32)
+console.log("Convertendo 30°C em Fahrenhein e Kelvin", grausCelsiusConvF, "°F", grausCelsiusConvK, "°K")
