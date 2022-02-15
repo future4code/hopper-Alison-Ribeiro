@@ -33,7 +33,27 @@ let emailUsuario = prompt("Digite seu e-mail")
 
 console.log(`O e-mail ${emailUsuario} foi cadastrado com sucesso. Seja bem-vinda(o), ${nomeUsuario}`)
 */
+
+/*
 // Exercício Código 2
-let comidaFav = ["sushi", "feijoada", "paella", "yakissoba", "bobó de camarão"]
+let comidaFav = ["Sushi", "Feijoada", "Paella", "Yakissoba", "Bobó de Camarão"]
 console.log(comidaFav)
-console.log(`Essas são as minhas comidas preferidas:`)
+console.log(`Essas são as minhas comidas preferidas: \n -${comidaFav[0]}; \n -${comidaFav[1]}; \n -${comidaFav[2]};\n -${comidaFav[3]};\n -${comidaFav[4]}.`)
+comidaFav[1] = prompt("Informe sua comida favorita")
+console.log(comidaFav)
+*/
+
+
+// Exercício Código 3
+let tarefasDia = []
+let listaDeTarefas = tarefasDia
+
+tarefasDia[0] = prompt("Informe 3 tarefas. A primeira é?")
+tarefasDia[1] = prompt("Informe 3 tarefas. A segunda é?")
+tarefasDia[2] = prompt("Informe 3 tarefas. A terceira é?")
+
+console.log(`As tarefas do dia são: ${listaDeTarefas}`)
+
+let tarefaRealizada = Number(prompt("De 1 a 3, qual das tarefas foi realizada?"))
+tarefasDia.splice((tarefaRealizada-1), 1)
+console.log(`As tarefas do dia são: ${listaDeTarefas}`)
