@@ -43,7 +43,7 @@ comidaFav[1] = prompt("Informe sua comida favorita")
 console.log(comidaFav)
 */
 
-
+/*
 // Exercício Código 3
 let tarefasDia = []
 let listaDeTarefas = tarefasDia
@@ -56,4 +56,17 @@ console.log(`As tarefas do dia são: ${listaDeTarefas}`)
 
 let tarefaRealizada = Number(prompt("De 1 a 3, qual das tarefas foi realizada?"))
 tarefasDia.splice((tarefaRealizada-1), 1)
-console.log(`As tarefas do dia são: ${listaDeTarefas}`)
+console.log(`As tarefas restantes são: ${listaDeTarefas}`)
+*/
+
+/*
+// Desafio 1
+let frase = prompt("Escreva uma frase")
+let frasePalavras = [frase.split(" ")]
+console.log(frasePalavras)
+*/
+
+// Desafio 2
+let frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"]
+let frutaSeparada = frutas.indexOf("Abacaxi")
+console.log(`O índice da palavra Abacaxi é ${frutaSeparada}, são ${frutas.length} frutas no total`)
