@@ -30,14 +30,14 @@ console.log(resposta)
 */
 
 // Exercício Código 1.
-/*
+
 // a)
 function imprimeFrase3 () {
     console.log("Eu sou Alison, tenho 39 anos, moro em Valparaiso e sou estudante.")
 }
-console.log(imprimeFrase3())
-*/
-/*
+imprimeFrase3()
+
+
 // b)
 
 function imprimeFrase2(nome, idade, cidade, profissao) {
@@ -46,7 +46,7 @@ function imprimeFrase2(nome, idade, cidade, profissao) {
 }
 
 console.log(imprimeFrase2("Alison", 39, "Valparaiso", "Webdesign"))
-*/
+
 
 // Exercício Código 2
 /*
@@ -88,7 +88,7 @@ let recebeMsg = mensagemTAM(prompt("Digite uma mensagem"))
 
 console.log(recebeMsg)
 */
-
+/*
 // Exercício 3
 
 function somaDeNum(nume1, nume2) {
@@ -108,3 +108,4 @@ let valor1 = Number(prompt("Digite um número"))
 let valor2 = Number(prompt("Digite outro múmero"))
 
 console.log(`Números Inseridos: ${valor1} e ${valor2}\nSoma: ${somaDeNum(valor1, valor2)}\nDiferença: ${subDeNum(valor1, valor2)}\nMultiplicação: ${multiDeNum(valor1, valor2)}\nDivisão: ${diviDeNum(valor1, valor2)}`)
+*/
