@@ -77,7 +77,7 @@ console.log(`Eu sou ${outraPessoa.nome}, mas pode me chamar de: ${outraPessoa.ap
 
 //Exercício código 2
 
-
+/*
 const dadosPessoa = {
     nome: "Alison",
     idade: 39,
@@ -87,7 +87,6 @@ const dadosPessoa = {
 console.log(dadosPessoa)
 
 const dadosPessoa2 = {
-    ...dadosPessoa,
     nome: "Bruna",
     idade: 31,
     profissao: "Professora"
@@ -95,14 +94,19 @@ const dadosPessoa2 = {
 
 console.log(dadosPessoa2)
 
-function contaPessoas(pessoa) {
-    let dadosComp = [pessoa]
+function contaPessoas(pessoa1, pessoa2) {
+    let dadosComp = [pessoa1, pessoa2]
     return dadosComp
 }
 
-console.log(contaPessoas(dadosPessoa))
+console.log(contaPessoas(dadosPessoa, dadosPessoa2))
 
-let informacao = contaPessoas(dadosPessoa)
-let informacao2 = contaPessoas(dadosPessoa2)
+let informacao = [contaPessoas(dadosPessoa, dadosPessoa2)]
 
 // console.log(`${contaPessoa(dadosPessoa.informacao[0])}, ${contaPessoa(informacao.length[0])}`)
+*/
+
+//Exercício código 3
+
+var carrinho = []
+
