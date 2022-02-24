@@ -130,22 +130,22 @@ let publico = ["DO", "IN"]
 let fase = ["SF", "DT", "FI"]
 
 let categoriaInfoReal = {
-    categoria1R: {
+    categoria1: {
         valorReal1: 1320
         valorReal2: 660
         valorReal3: 1980
     }
-    categoria2R: {
+    categoria2: {
         valorReal1: 880
         valorReal2: 440
         valorReal3: 1320
     }
-    categoria3R: {
+    categoria3: {
         valorReal1: 550
         valorReal2: 330
         valorReal3: 880
     }
-    categoria4R: {
+    categoria4: {
         valorReal1: 220
         valorReal2: 170
         valorReal3: 330
@@ -153,22 +153,22 @@ let categoriaInfoReal = {
 }
 
 let categoriaInfoDolar = {
-    categoria1D: {
+    categoria1: {
         valorDolar1: 1320 / 4.1
         valorDolar2: 660 / 4.1
         valorDolar3: 1980 / 4.1
     }
-    categoria2D: {
+    categoria2: {
         valorDolar1: 880 / 4.1
         valorDolar2: 440 / 4.1
         valorDolar3: 1320 / 4.1
     }
-    categoria3D: {
+    categoria3: {
         valorDolar1: 550 / 4.1
         valorDolar2: 330 / 4.1
         valorDolar3: 880 / 4.1
     }
-    categoria4D: {
+    categoria4: {
         valorDolar1: 220 / 4.1
         valorDolar2: 170 / 4.1
         valorDolar3: 330 / 4.1
