@@ -92,3 +92,87 @@ switch (estudanteTurno) {
 }
 */
 
+// Exercício escrita de código 4
+/*
+let filmeGenero = prompt("Qual gênero de filme vai assistir?")
+let valorIngresso = prompt("Qual o valor do ingresso?")
+
+if (filmeGenero.toLowerCase() == "fantasia" && valorIngresso < 15) {
+    console.log("Bom filme!")
+} else {
+    console.log("Escolha outro filme :(")
+}
+*/
+
+// Desafios 1
+/*
+let filmeGenero = prompt("Qual gênero de filme vai assistir?")
+let valorIngresso = prompt("Qual o valor do ingresso?")
+
+if (filmeGenero.toLowerCase() == "fantasia" && valorIngresso < 15) {
+    let lanche = prompt("Qual lanche vai querer?")
+    console.log("Bom filme!")
+    console.log(`Aproveiite o seu ${lanche}`)
+} else {
+    console.log("Escolha outro filme :(")
+}
+*/
+
+// Desafio 2
+
+let nomeUsuario = prompt("Digite seu nome completo.").toUpperCase()
+let jogoPublico = prompt("Informe o tipo de jogo deseja - DO para Doméstico ou IN para Internacional").toUpperCase()
+let jogoFase = prompt("Qual faase deseja? SF Semi-Final, DT Decisão terceiro lugar ou FI Final").toUpperCase()
+let jogoCategoria = Number(prompt("Qual categoria de ingressos deseja? 1, 2, 3 ou 4"))
+let jogoQtdIngressos = Number(prompt("Informe a quantidade de ingressos:"))
+
+let publico = ["DO", "IN"]
+let fase = ["SF", "DT", "FI"]
+
+let categoriaInfoReal = {
+    categoria1R: {
+        valorReal1: 1320
+        valorReal2: 660
+        valorReal3: 1980
+    }
+    categoria2R: {
+        valorReal1: 880
+        valorReal2: 440
+        valorReal3: 1320
+    }
+    categoria3R: {
+        valorReal1: 550
+        valorReal2: 330
+        valorReal3: 880
+    }
+    categoria4R: {
+        valorReal1: 220
+        valorReal2: 170
+        valorReal3: 330
+    }
+}
+
+let categoriaInfoDolar = {
+    categoria1D: {
+        valorDolar1: 1320 / 4.1
+        valorDolar2: 660 / 4.1
+        valorDolar3: 1980 / 4.1
+    }
+    categoria2D: {
+        valorDolar1: 880 / 4.1
+        valorDolar2: 440 / 4.1
+        valorDolar3: 1320 / 4.1
+    }
+    categoria3D: {
+        valorDolar1: 550 / 4.1
+        valorDolar2: 330 / 4.1
+        valorDolar3: 880 / 4.1
+    }
+    categoria4D: {
+        valorDolar1: 220 / 4.1
+        valorDolar2: 170 / 4.1
+        valorDolar3: 330 / 4.1
+    }
+}
+
+function publicoValores(info1, info2, info3)
