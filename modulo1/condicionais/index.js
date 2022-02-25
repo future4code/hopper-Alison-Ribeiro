@@ -120,59 +120,106 @@ if (filmeGenero.toLowerCase() == "fantasia" && valorIngresso < 15) {
 
 // Desafio 2
 
+let categorias = [1, 2, 3, 4]
+
 let nomeUsuario = prompt("Digite seu nome completo.").toUpperCase()
 let jogoPublico = prompt("Informe o tipo de jogo deseja - DO para Doméstico ou IN para Internacional").toUpperCase()
 let jogoFase = prompt("Qual faase deseja? SF Semi-Final, DT Decisão terceiro lugar ou FI Final").toUpperCase()
 let jogoCategoria = Number(prompt("Qual categoria de ingressos deseja? 1, 2, 3 ou 4"))
 let jogoQtdIngressos = Number(prompt("Informe a quantidade de ingressos:"))
 
-let publico = ["DO", "IN"]
-let fase = ["SF", "DT", "FI"]
+let jogoTipo
+let jogoEtapa
+let categoriaEscolhida = categorias[jogoCategoria - 1]
 
+if (jogoPublico == "IN") {
+    jogoTipo = "Internacional"
+} else {
+    jogoTipo = "Nacional"
+}
+
+if (jogoFase == "SF") {
+    jogoEtapa = "Semifinais"
+} else if (jogoFase == "DT") {
+    jogoEtapa = "Decisão do 3º lugar"
+} else {
+    jogoEtapa = "Final"
+}
+
+/*
 let categoriaInfoReal = {
     categoria1: {
-        valorReal1: 1320
-        valorReal2: 660
-        valorReal3: 1980
+        valor1: 1320
+        valor2: 660
+        valor3: 1980
     }
     categoria2: {
-        valorReal1: 880
-        valorReal2: 440
-        valorReal3: 1320
+        valor1: 880
+        valor2: 440
+        valor3: 1320
     }
     categoria3: {
-        valorReal1: 550
-        valorReal2: 330
-        valorReal3: 880
+        valor1: 550
+        valor2: 330
+        valor3: 880
     }
     categoria4: {
-        valorReal1: 220
-        valorReal2: 170
-        valorReal3: 330
+        valor1: 220
+        valor2: 170
+        valor3: 330
     }
 }
 
 let categoriaInfoDolar = {
     categoria1: {
-        valorDolar1: 1320 / 4.1
-        valorDolar2: 660 / 4.1
-        valorDolar3: 1980 / 4.1
+        valor1: 1320 / 4.1
+        valor2: 660 / 4.1
+        valor3: 1980 / 4.1
     }
     categoria2: {
-        valorDolar1: 880 / 4.1
-        valorDolar2: 440 / 4.1
-        valorDolar3: 1320 / 4.1
+        valor1: 880 / 4.1
+        valor2: 440 / 4.1
+        valor3: 1320 / 4.1
     }
     categoria3: {
-        valorDolar1: 550 / 4.1
-        valorDolar2: 330 / 4.1
-        valorDolar3: 880 / 4.1
+        valor1: 550 / 4.1
+        valor2: 330 / 4.1
+        valor3: 880 / 4.1
     }
     categoria4: {
-        valorDolar1: 220 / 4.1
-        valorDolar2: 170 / 4.1
-        valorDolar3: 330 / 4.1
+        valor1: 220 / 4.1
+        valor2: 170 / 4.1
+        valor3: 330 / 4.1
     }
 }
+*/
 
-function publicoValores(info1, info2, info3)
+function respostaUsuario (info1, info2, info3, info4, info5, info6, info7) {
+    console.log(`---Dados da Compra---
+    Nome do cliente: ${info1}
+    Tipo do Jogo: ${info2}
+    Etapa do jogo: ${info3}
+    Categoria: ${info4}
+    Quantidade de Ingressos: ${info5} ingressos
+    ---Valores---
+    Valor do ingresso: ${info6}
+    Valor total: ${info7}`)
+}
+
+function valorAPagarReal (dado1, dado2) {
+    categoriaInfoReal.dado1.dado2
+}
+
+function valorAPagarDolar () {
+
+}
+
+if (jogoPublico == "IN") {
+    valorAPagarDolar()
+} else {
+    valorAPagarReal()
+}
+
+if (jogoPublico == "IN" && jogoFase == "SF" && jogoCategoria == 1) {
+                console.log(respostaUsuario(nomeUsuario, jogoTipo, jogoEtapa, categoriaEscolhida, jogoQtdIngressos, ))
+}
