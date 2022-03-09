@@ -51,24 +51,37 @@ if (animaisQtd != 0) {
 
 let numerosOriginais = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
 
+/*
 // a)
-for (let lista of numerosOriginais) {
+function imprime(fonte) {
+for (let lista of fonte) {
     console.log(lista)
 }
-
+}
+imprime(numerosOriginais)
+*/
+/*
 // b)
-for (let div of numerosOriginais) {
+function dividindo(fonte) {
+for (let div of fonte) {
     console.log(div/10)
 }
-
+}
+dividindo(numerosOriginais)
+*/
+/*
 // c)
 let numerosPares = []
-for (let par of numerosOriginais) {
+function numeroPar(fonte) {
+for (let par of fonte) {
     if (par % 2 == 0) {
         numerosPares.push(par)
     }
 }
-console.log(numerosPares)
+return numerosPares
+}
+console.log(numeroPar(numerosOriginais))
+*/
 
 // d)
 /*
@@ -94,7 +107,7 @@ function novoArray(array2) {
 let msg = novoArray(numerosOriginais)
 console.log(msg)
 
-/*
+
 // resolução maior e menor
 const maiorEMenorNumero = (arrayDeNumeros) => {
     let maiorNumero = 0
@@ -103,7 +116,7 @@ const maiorEMenorNumero = (arrayDeNumeros) => {
         let valorMaximo = arrayDeNumeros[i]
         
         if (i === 0) {
-            console.log(valorMaximo)
+           
             maiorNumero = menorNumero = valorMaximo
         }
         if (valorMaximo > maiorNumero) {
@@ -119,6 +132,7 @@ const maiorEMenorNumero = (arrayDeNumeros) => {
   const array = [20, 30, 40, 10, 5, 26, 70, 1]
   maiorEMenorNumero(array)
 
+/*
   // outra resolução
   let maiorNumero = 0
 for (var num of arrayOriginal){
@@ -133,5 +147,5 @@ for(var i = 0; i < arrayOriginal.length-1; i++){
     }
 }
 console.log(`O maior número é ${maiorNumero}, e o menor número é ${menorNumero}`)
-
-  */
+*/
+  
