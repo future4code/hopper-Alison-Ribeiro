@@ -84,7 +84,7 @@ console.log(numeroPar(numerosOriginais))
 */
 
 // d)
-
+/*
 let stringArray = []
 let indice = 0
 function textoNoArray(fonte) {
@@ -97,7 +97,7 @@ return stringArray
 }
 
 console.log(textoNoArray(numerosOriginais))
-
+*/
 
 
 /*
@@ -112,6 +112,7 @@ let msg = novoArray(numerosOriginais)
 console.log(msg)
 */
 
+/*
 // resolução maior e menor
 const maiorEMenorNumero = (arrayDeNumeros) => {
     let maiorNumero = 0
@@ -135,6 +136,7 @@ const maiorEMenorNumero = (arrayDeNumeros) => {
   
   const array = [20, 30, 40, 10, 5, 26, 70, 1]
   maiorEMenorNumero(array)
+*/
 
 /*
   // outra resolução
@@ -153,3 +155,4 @@ for(var i = 0; i < arrayOriginal.length-1; i++){
 console.log(`O maior número é ${maiorNumero}, e o menor número é ${menorNumero}`)
 */
   
+// Desafios 1
