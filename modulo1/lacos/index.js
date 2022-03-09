@@ -84,19 +84,23 @@ console.log(numeroPar(numerosOriginais))
 */
 
 // d)
-/*
+
 let stringArray = []
 let indice = 0
-function textoNoArray(ind, tex) {
-    stringArray.push(`O elemento do índex ${ind} é: ${tex}`)
-}
- for (let texto of numerosOriginais) {
-    textoNoArray(indice, texto)
+function textoNoArray(fonte) {
+     for (let texto of fonte) {
+        stringArray.push(`O elemento do índex ${indice} é: ${texto}`)
+    
     indice++
 }
-console.log(stringArray)
-*/
+return stringArray
+}
 
+console.log(textoNoArray(numerosOriginais))
+
+
+
+/*
 function novoArray(array2) {
     let stringArray2 = []
     for(let i = 0; i < array2.length; i++) {
@@ -106,7 +110,7 @@ function novoArray(array2) {
 }
 let msg = novoArray(numerosOriginais)
 console.log(msg)
-
+*/
 
 // resolução maior e menor
 const maiorEMenorNumero = (arrayDeNumeros) => {
