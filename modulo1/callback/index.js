@@ -119,3 +119,26 @@ console.log(produtoYpe)
 let produtoYpePromo = produtos.filter(ype => ype.nome.includes("Ypê")).map(ype => `Compre ${ype.nome} por ${ype.preco}`)
 
     console.log(produtoYpePromo)  
+
+
+// Desafio 1
+
+
+const pokemons = [
+   { nome: "Bulbasaur", tipo: "grama" },
+   { nome: "Bellsprout", tipo: "grama" },
+   { nome: "Charmander", tipo: "fogo" },
+   { nome: "Vulpix", tipo: "fogo" },
+   { nome: "Squirtle", tipo: "água" },
+   { nome: "Psyduck", tipo: "água" },
+]
+// a)
+let pokemonNome = pokemons.map((dado) =>
+dado.nome).sort()
+console.log(pokemonNome)
+// b)
+let pokemonNRepete = new Set()
+pokemons.map((type) => {
+   pokemonNRepete.add(poke.tipo)
+})
+console.log(pokemonNRepete)
