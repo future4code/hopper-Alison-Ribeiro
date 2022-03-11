@@ -138,7 +138,7 @@ dado.nome).sort()
 console.log(pokemonNome)
 // b)
 let pokemonNRepete = new Set()
-pokemons.map((type) => {
-   pokemonNRepete.add(poke.tipo)
+pokemons.map((pok) => {
+   pokemonNRepete.add(pok.tipo)
 })
 console.log(pokemonNRepete)
