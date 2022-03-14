@@ -120,106 +120,109 @@ if (filmeGenero.toLowerCase() == "fantasia" && valorIngresso < 15) {
 
 // Desafio 2
 
-let categorias = [1, 2, 3, 4]
-
 let nomeUsuario = prompt("Digite seu nome completo.").toUpperCase()
 let jogoPublico = prompt("Informe o tipo de jogo deseja - DO para Doméstico ou IN para Internacional").toUpperCase()
 let jogoFase = prompt("Qual faase deseja? SF Semi-Final, DT Decisão terceiro lugar ou FI Final").toUpperCase()
 let jogoCategoria = Number(prompt("Qual categoria de ingressos deseja? 1, 2, 3 ou 4"))
 let jogoQtdIngressos = Number(prompt("Informe a quantidade de ingressos:"))
 
+let precoEntrada
+switch (jogoFase) {
+    case "SF":
+        switch (jogoCategoria) {
+            case 1:
+                precoEntrada = 1320;
+                break;
+            case 2:
+                precoEntrada = 880;
+                break;
+            case 3:
+                precoEntrada = 550;
+                break;
+            case 4:
+                precoEntrada = 220;
+                break;
+            default:
+                precoEntrada = 0;
+                break;
+        }
+        break;
+    case "DT":
+        switch (jogoCategoria) {
+            case 1:
+                precoEntrada = 660;
+                break;
+            case 2:
+                precoEntrada = 440;
+                break;
+            case 3:
+                precoEntrada = 330;
+                break;
+            case 4:
+                precoEntrada = 170;
+                break;
+            default:
+                precoEntrada = 0;
+                break;
+        }
+        break;
+    case "FI":
+        switch (jogoCategoria) {
+            case 1:
+                precoEntrada = 1980;
+                break;
+            case 2:
+                precoEntrada = 1320;
+                break;
+            case 3:
+                precoEntrada = 880;
+                break;
+            case 4:
+                precoEntrada = 330;
+                break;
+            default:
+                precoEntrada = 0;
+                break;
+        }
+        break;
+    default:
+        break;
+}
+
+if (jogoPublico === "IN") {
+    precoEntrada *= 4.1
+} 
+
 let jogoTipo
-let jogoEtapa
-let categoriaEscolhida = categorias[jogoCategoria - 1]
-
-if (jogoPublico == "IN") {
+if (jogoPublico === "IN") {
     jogoTipo = "Internacional"
-} else {
+} else if (jogoPublico === "DO") {
     jogoTipo = "Nacional"
-}
-
-if (jogoFase == "SF") {
-    jogoEtapa = "Semifinais"
-} else if (jogoFase == "DT") {
-    jogoEtapa = "Decisão do 3º lugar"
 } else {
-    jogoEtapa = "Final"
+    jogoTipo = "Erro"
 }
 
-/*
-let categoriaInfoReal = {
-    categoria1: {
-        valor1: 1320
-        valor2: 660
-        valor3: 1980
-    }
-    categoria2: {
-        valor1: 880
-        valor2: 440
-        valor3: 1320
-    }
-    categoria3: {
-        valor1: 550
-        valor2: 330
-        valor3: 880
-    }
-    categoria4: {
-        valor1: 220
-        valor2: 170
-        valor3: 330
-    }
+let jogoEtapa
+switch (jogoFase) {
+    case "SF":
+        jogoEtapa = "Semifinais";
+        break;
+    case "DT":
+        jogoEtapa = "Decisão do 3º lugar";
+        break;
+    case "FI":
+        jogoEtapa = "Final";
+        break;
+    default:
+        jogoEtapa = "Erro";
+        break;
 }
 
-let categoriaInfoDolar = {
-    categoria1: {
-        valor1: 1320 / 4.1
-        valor2: 660 / 4.1
-        valor3: 1980 / 4.1
-    }
-    categoria2: {
-        valor1: 880 / 4.1
-        valor2: 440 / 4.1
-        valor3: 1320 / 4.1
-    }
-    categoria3: {
-        valor1: 550 / 4.1
-        valor2: 330 / 4.1
-        valor3: 880 / 4.1
-    }
-    categoria4: {
-        valor1: 220 / 4.1
-        valor2: 170 / 4.1
-        valor3: 330 / 4.1
-    }
-}
-*/
-
-function respostaUsuario (info1, info2, info3, info4, info5, info6, info7) {
-    console.log(`---Dados da Compra---
-    Nome do cliente: ${info1}
-    Tipo do Jogo: ${info2}
-    Etapa do jogo: ${info3}
-    Categoria: ${info4}
-    Quantidade de Ingressos: ${info5} ingressos
-    ---Valores---
-    Valor do ingresso: ${info6}
-    Valor total: ${info7}`)
-}
-
-function valorAPagarReal (dado1, dado2) {
-    categoriaInfoReal.dado1.dado2
-}
-
-function valorAPagarDolar () {
-
-}
-
-if (jogoPublico == "IN") {
-    valorAPagarDolar()
-} else {
-    valorAPagarReal()
-}
-
-if (jogoPublico == "IN" && jogoFase == "SF" && jogoCategoria == 1) {
-                console.log(respostaUsuario(nomeUsuario, jogoTipo, jogoEtapa, categoriaEscolhida, jogoQtdIngressos, ))
-}
+console.log(`Dados de sua Compra
+Nome: ${nomeUsuario};
+Tipo do Jogo: ${jogoTipo};
+Etapa do Jogo: ${jogoEtapa};
+Categoria do Jogo: ${jogoCategoria};
+Valores dos Ingressos
+Preço Unitário: ${(precoEntrada).toFixed(2)};
+Total a pagar: ${(precoEntrada*jogoQtdIngressos).toFixed(2)}`)
