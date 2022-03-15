@@ -1,0 +1,9 @@
+Resolvendo Problemas
+
+Receber e entender o que é pedido pelo trabalho. Seja agora pelos exercícios ou quando for um pedido profissional. Saber qual a necessidade do problema a ser resolvido, o que realmente é proposto para que você ache a solução. Prestar atenção nas informações repassadas para que se saiba o que fazer e quais informações poderá retirar para a solução.
+Após identificar essas informações, deve-se retirar/separar palavras-chave para começar a desenhar o código, como possíveis nomes de variáveis, funções, condições...
+Com esses dados é partir para o "desenho", o que serão entradas ou saídas, como as informções irão chegar ou sair do sistema. E com isso como o sistema deve tratar essas informações.
+Com essas informações já é possível "montar" visualmente um esquema ou um sistema visual. Onde e como ficam as informações, quando e se será necessário tomadas de decisão (condições) até que se chegue a um resultado.
+Com esse "esquema" montado, se possível no papel ou em um bloco de notas encontrar possíveis soluções, teste e verifique se chega ao resultado esperado.
+Montado com as primeiras opções, é testar para verificar se a lógica está funcionando e se há resultado.
+Após os testes e quando se chegar ao resultado esperado, revisar o código para encontrar possíveis mudanças que possam melhorar o código, deixá-lo mais fácil de entender e otimizado.
