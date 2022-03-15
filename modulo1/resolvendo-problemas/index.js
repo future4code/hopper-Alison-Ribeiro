@@ -132,7 +132,7 @@ switch (animal) {
 }
 */
 // Parte 10 - Laços
-
+/*
 let numerosRepeticao = [2, 4, 7, 32, 1, 9]
 
 let i = 0
@@ -143,4 +143,19 @@ while (i < numerosRepeticao.length) {
     }
     i++
 }
+
+for(let i = 0; i < numerosRepeticao.length; i++) {
+    if(numerosRepeticao[i] > maior) {
+        maior = numerosRepeticao[i]
+    }
+}
+
+for (let numero of numerosRepeticao) {
+    if(numero > maior) {
+        maior = numerosRepeticao[i]
+    }
+}
 console.log(`O maior número é: ${maior}`)
+
+*/
+// Parte 11 - 
