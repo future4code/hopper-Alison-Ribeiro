@@ -142,7 +142,12 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
+    contas.map((conta) => {
+        let divida = conta.compras.reduce((valor1, valor2) => valor1 + valor2, 0)
+        conta.saldoTotal -= divida
+        conta.compras = []
+    })
+    return contas
 }
 
 // EXERCÍCIO 15A
