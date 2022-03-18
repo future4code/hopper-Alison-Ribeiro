@@ -157,12 +157,11 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   return consultas.sort((data1, data2) => {
-   data1 = data1.dataDaConsulta.split("/").reverse().join("-")
-   data2 = data2.dataDaConsulta.split("/").reverse().join("-")
-   new Date(data1)
-   new Date(data2)
-   return data1.localeCompare(data2)
+   return consultas.sort((consulta1, consulta2) => {
+   let datatransformada1 = consulta1.dataDaConsulta.split("/").reverse().join("-")
+   let datatransformada2 = consulta2.dataDaConsulta.split("/").reverse().join("-")
+
+   return datatransformada1.localeCompare(datatransformada2)
    
    })
    
