@@ -84,6 +84,7 @@ console.log(numeroPar(numerosOriginais))
 */
 
 // d)
+//Resolução 1
 /*
 let stringArray = []
 let indice = 0
@@ -98,8 +99,7 @@ return stringArray
 
 console.log(textoNoArray(numerosOriginais))
 */
-
-
+//Resolução 2
 /*
 function novoArray(array2) {
     let stringArray2 = []
@@ -111,9 +111,9 @@ function novoArray(array2) {
 let msg = novoArray(numerosOriginais)
 console.log(msg)
 */
-
+// e)
+// resolução maior e menor 1
 /*
-// resolução maior e menor
 const maiorEMenorNumero = (arrayDeNumeros) => {
     let maiorNumero = 0
     let menorNumero = 0
@@ -137,22 +137,30 @@ const maiorEMenorNumero = (arrayDeNumeros) => {
   const array = [20, 30, 40, 10, 5, 26, 70, 1]
   maiorEMenorNumero(array)
 */
-
-/*
-  // outra resolução
-  let maiorNumero = 0
-for (var num of arrayOriginal){
-    if(num > maiorNumero){
-        maiorNumero = num
-    }
-}
-let menorNumero = maiorNumero
-for(var i = 0; i < arrayOriginal.length-1; i++){
-    if(menorNumero>arrayOriginal[i]){
-        menorNumero = arrayOriginal[i]
-    }
-}
-console.log(`O maior número é ${maiorNumero}, e o menor número é ${menorNumero}`)
-*/
   
 // Desafios 1
+
+// a)
+console.log("Vamos jogar?")
+let numeroUsuario1 = Number(prompt("Digite um número de 1 a 10"))
+// b)
+let numeroTentativas = 0
+let numeroUsuario2
+let acertou = true
+
+while(acertou) {
+    numeroUsuario2 = Number(prompt("Tente advinhar, chute um número:"))
+    numeroTentativas++
+console.log(`O número chutado foi: ${numeroUsuario2}`)
+if (numeroUsuario2 ===numeroUsuario1) {
+    console.log(`Acerto!
+    O número de tentativas foi: ${numeroTentativas}`)
+    acertou = false
+} else if (numeroUsuario1 > numeroUsuario2) {
+    console.log(`Errrroooou. O número escolhido é maior. Tente de novo!`)
+} else {
+    console.log(`Errrrooouuu. O número escolhido é menor. Tente novamente!`)
+}
+}
+
+
