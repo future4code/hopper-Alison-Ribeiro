@@ -11,7 +11,7 @@
  * 
  */
 
-/*    
+/*
 console.log("Seja bem-vindo(a) ao nosso jogo, BlackJack! Divirta-se!")
 
     if(confirm("Quer jogar uma nova partida?") == true) {
