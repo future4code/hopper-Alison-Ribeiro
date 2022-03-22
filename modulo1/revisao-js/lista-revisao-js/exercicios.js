@@ -11,14 +11,33 @@ function retornaTamanhoArray(array) {
 
 // EXERCÍCIO 02
 function retornaArrayInvertido(array) {
-  let invert = array.reverse()
-  return invert
+  let invertido = []
+  for (let i = array.length - 1; i >= 0; i--) {
+      invertido.push(array[i])
+  }
+  return invertido
+  //  let invert = array.reverse()
+  //return invert
 }
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-  let ordem = array.sort((a, b) => a-b)
-    return ordem
+let tamanhoArray = array.length
+for (let i = 0; i < tamanhoArray; i++) {
+    for(let j = 0; j < (tamanhoArray - i - 1); j++) {
+        if(array[j] > array[j+1]) {
+            let auxiliar = array[j]
+            array[j] = array[j+1]
+            array[j+1] = auxiliar
+            
+        }
+    }
+    
+}
+return array
+
+    // let ordem = array.sort((a, b) => a-b)
+//    return ordem
 }
 
 // EXERCÍCIO 04
