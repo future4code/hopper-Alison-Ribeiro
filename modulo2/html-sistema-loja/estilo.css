@@ -14,6 +14,7 @@ table, th, td {
     border: 1px solid #928d8dc7;
     align-content: center;
     text-align: center;
+    border-radius: 5px;
 }
 
 th {
@@ -25,15 +26,18 @@ th:hover {
 
 }
 
-td:hover {
+tr:hover {
     background-color: aqua;
 }
 
+a:hover {
+   color: #f7f7f7;
+}
 a {
-   color: #5c1212; 
+    color: black;
 }
 
-div {
+.conteudoSite {
     background-color: aliceblue;
 }
 
@@ -45,11 +49,35 @@ div {
 }
 
 footer {
-    display: inline;
-    
+    display: block;
+    background-color: rgb(85, 159, 209);
+    height: 50px;
 }
 
 .rodapedisplay {
     display: inline;
-    background-color: #b6e6fcf6;
+    color: aliceblue;
+    margin: 0px 10px;
+    font-size: 10px;
+}
+
+div.bloco {
+    background-image: url(./img/top.jpg);
+    border-radius: 10px;
+    margin: 10px 0px;
+    background-position: top center;
+    height: 150px;
+}
+
+.textotop {
+    color: aliceblue;
+}
+
+img.imgcurso {
+    height: 100px;
+}
+
+tr.menuinteracao:hover {
+    background-color: #ac2121;
+    
 }
