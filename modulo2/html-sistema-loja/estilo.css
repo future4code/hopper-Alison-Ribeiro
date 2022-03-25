@@ -1,0 +1,83 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e0ffff url("./img/fundo.jpg");
+    font-size: 18px;
+    max-width: 750px;
+    vertical-align: middle;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #928d8dc7;
+    align-content: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+th {
+    padding: 5px;
+}
+
+th:hover {
+    background-color: coral;
+
+}
+
+tr:hover {
+    background-color: aqua;
+}
+
+a:hover {
+   color: #f7f7f7;
+}
+a {
+    color: black;
+}
+
+.conteudoSite {
+    background-color: aliceblue;
+}
+
+.redesSociais {
+    height: 28px;
+    float: right;
+    padding: 5px;
+    display: inline;
+}
+
+footer {
+    display: block;
+    background-color: rgb(85, 159, 209);
+    height: 50px;
+}
+
+.rodapedisplay {
+    display: inline;
+    color: aliceblue;
+    margin: 0px 10px;
+    font-size: 10px;
+}
+
+div.bloco {
+    background-image: url(./img/top.jpg);
+    border-radius: 10px;
+    margin: 10px 0px;
+    background-position: top center;
+    height: 150px;
+}
+
+.textotop {
+    color: aliceblue;
+}
+
+img.imgcurso {
+    height: 100px;
+}
+
+tr.menuinteracao:hover {
+    background-color: #ac2121;
+    
+}
