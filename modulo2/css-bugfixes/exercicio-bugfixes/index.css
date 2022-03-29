@@ -4,7 +4,7 @@
   *
   **/
 
-* {
+  * {
     margin: 0;
     padding: 0;
 }
@@ -42,6 +42,7 @@ div>p:first-child {
 
 div img {
     background: rgb(255, 255, 255);
+    
 }
 
 .botao-amarelo {
@@ -59,7 +60,7 @@ div img {
 
 .container {
     height: 450px;
-    text-align: center;
+
 }
 
 .icone {
@@ -74,14 +75,19 @@ div img {
   *
   **/
 
-#container-de-descricao {
+  #container-de-descricao {
     background-color: #2274a5;
     color: white;
 
 }
 
 #container-de-descricao>ol {
-    padding: 15px 0px;
+    padding: 15px 0px;    
+}
+
+li{
+    display: list-item;
+    list-style-position: inside;
 }
 
 #container-de-descricao>p.descricao {
