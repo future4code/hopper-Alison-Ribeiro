@@ -122,6 +122,11 @@ td.texto-tabela {
     text-align: center;
 }
 
+td>img {
+    height: 65px;
+    width: 65px;
+}
+
 .container-do-search {
     margin-top: 20px;
     height: 100px;
