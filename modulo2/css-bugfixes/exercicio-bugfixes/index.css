@@ -23,6 +23,9 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 button:focus {
@@ -113,11 +116,14 @@ div:last-child {
 
 table {
     width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 td button {
     background-color: #fadf63;
-    width: 150px;
+    width: 130px;
     height: 30px;
     border-radius: 5px;
     color: black;
@@ -125,7 +131,6 @@ td button {
 
 td.texto-tabela {
     text-align: center;
-    border-bottom: 3px solid #ddd;
 }
 
 td>img {
@@ -156,4 +161,9 @@ td>button:hover {
 
 #back-button:hover {
     background-color: #635a3d
+}
+
+.botao-voltar{
+    text-align: center;
+    margin-top: 5vw;
 }
