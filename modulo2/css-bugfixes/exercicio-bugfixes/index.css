@@ -118,6 +118,10 @@ td button {
     color: black;
 }
 
+td.texto-tabela {
+    text-align: center;
+}
+
 .container-do-search {
     margin-top: 20px;
     height: 100px;
