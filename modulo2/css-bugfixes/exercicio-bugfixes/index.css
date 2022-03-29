@@ -76,7 +76,7 @@ div img {
     padding: 15px 0px;
 }
 
-#container-de-descricao>p {
+#container-de-descricao>p.descricao {
     display: block;
     padding-top: 15vw;
 }
