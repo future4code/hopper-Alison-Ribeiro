@@ -9,13 +9,10 @@ body{
     margin: 0px;
 }
 
-header{
-    height: 45px;
-}
-
 div.corpofora{
     background-color: rgb(173, 39, 39);
     height: 355px;
+    
 }
 
 div.corpo{
