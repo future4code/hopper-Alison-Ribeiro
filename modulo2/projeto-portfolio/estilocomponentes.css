@@ -1,3 +1,4 @@
+/* Configutação do cabeçalho */
 header{
     display: flex;
     flex-direction: row;
@@ -11,45 +12,69 @@ img.toplogo{
     border:0px;
 }
 
-div.botaotop{
+button.top{
     text-align: center;
     border-radius: 5px;
     background-color: rgb(43, 92, 226);
     width: 130px;
     height: 40px;
-
+    color: white;
 }
 
-div.botaotop:hover{
+button.top:hover{
     background-color: rgb(35, 114, 35);
 }
 
 a.botaocabecalho{
     text-decoration: none;
-    color: aliceblue;
+    color: aliceblue;    
+}
+
+/* configuração conteúdo do portfolio - apresentação */
+div.corpoforaap{
+    background-color: rgb(173, 39, 39);
+    height: 50vh;
+}
+
+div.corpoap{
+    width: 75%;
+    padding-top: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.apinicial{
+    border-radius: 10px;
+    background-color: #e6effc;
+    margin: 15px;
+}
+
+.aptitulo{
+    color: #4e4e4e;
 }
 
 .apresentacao{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     color: #444444;
 }
 
-h4.apresentacao{
-    font-size: 1,5vw;
+p.apdescricao{
+    color: #4e4e4e;
 }
 
-p.ola{
-    text-align: center;
-}
-
-p.descricao{
-    text-align: center;
-    color: #6e6e6e;
-    font-size: 1,5vw 1,5hw;
+.apservicos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 div.job{
-    display: inline;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     background-color: #e6effc;
     width: 25%;
@@ -59,25 +84,48 @@ div.job{
     height: 320px;
 }
 
-#site{
-    position: absolute;
-    left: 1%;
-}
-
-#seo{
-    position: absolute;
-    left: 40%;
-}
-
-#front{
-    position: absolute;
-    right: 1%;
-}
-
 img.servicoimg{
     height: 10vw;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-top: 5px;
+    padding: 1vw 0px;
+}
+
+h4.jobtitulo{
+    padding: 1vw 0px;
+}
+
+/* espaço em branco */
+
+div.espaco{
+    height: 25vh;
+    background-color: white;
+}
+
+/* configuração conteúdo do portfolio - trabalhos realizados */
+
+div.corpoforatrab{
+    background-color: rgb(12, 109, 33);
+    height: 55vh;
+}
+
+
+
+/* configuração do rodapé */
+
+footer{
+    height: 25vh;
+}
+
+.trabservicos{
+    display: flex;
+    flex-direction: column;
+}
+
+.trab{
+    background-color: #e6effc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
