@@ -48,7 +48,8 @@ div.corpoap{
 .apinicial{
     border-radius: 10px;
     background-color: #e6effc;
-    margin: 15px;
+    margin: 15px 0px;
+    text-align: center;
 }
 
 .aptitulo{
@@ -110,17 +111,25 @@ div.corpoforatrab{
     height: 55vh;
 }
 
+.corpotrab{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 85vh;
+}
 
-
-/* configuração do rodapé */
-
-footer{
-    height: 25vh;
+.apresentacaotrab{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .trabservicos{
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
+    justify-content: space-around;
+    height: 100%;
 }
 
 .trab{
@@ -128,4 +137,29 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.trab2{
+    flex-direction: row-reverse;
+}
+
+.trab4{
+    flex-direction: row-reverse;
+}
+
+
+
+img.trabimg{
+    height: 15vh;
+    border-radius: 5px;
+}
+
+
+/* configuração do rodapé */
+
+footer{
+    height: 25vh;
 }
