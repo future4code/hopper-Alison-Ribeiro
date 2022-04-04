@@ -21,6 +21,19 @@ button.top{
     color: white;
 }
 
+.menu{
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(43, 92, 226);
+    height: 40px;
+    padding: 0px 15px;
+    color: white;
+}
+
+.menu:hover{
+    background-color: rgb(35, 114, 35);
+}
+
 button.top:hover{
     background-color: rgb(35, 114, 35);
 }
