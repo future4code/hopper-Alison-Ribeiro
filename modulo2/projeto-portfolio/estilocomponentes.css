@@ -163,8 +163,6 @@ div.corpoforatrab{
     flex-direction: row-reverse;
 }
 
-
-
 img.trabimg{
     height: 15vh;
     border-radius: 5px;
@@ -175,4 +173,32 @@ img.trabimg{
 
 footer{
     height: 25vh;
+}
+
+
+/* Página sobre */
+.qualifica{
+    background-color: rgb(173, 39, 39);
+    height: 50vh;
+    padding: 15px;
+}
+
+.corposobre{
+    background-color: #e6effc;
+    width: 75%;
+    padding-top: 5px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 20px;
+}
+
+.espacosobre{
+    height: 40vh;
+}
+
+.experiencia{
+    background-color: rgb(43, 92, 226);
+    height: 50vh;
+    padding: 15px;
 }
