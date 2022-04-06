@@ -45,7 +45,7 @@ a.botaocabecalho{
 
 /* configuração conteúdo do portfolio - apresentação */
 div.corpoforaap{
-    background-color: rgb(173, 39, 39);
+    background-color: rgb(197, 73, 73);
     height: 50vh;
 }
 
@@ -113,14 +113,14 @@ h4.jobtitulo{
 /* espaço em branco */
 
 div.espaco{
-    height: 25vh;
+    height: 35vh;
     background-color: white;
 }
 
 /* configuração conteúdo do portfolio - trabalhos realizados */
 
 div.corpoforatrab{
-    background-color: rgb(12, 109, 33);
+    background-color: rgb(59, 187, 87);
     height: 55vh;
 }
 
@@ -172,13 +172,47 @@ img.trabimg{
 /* configuração do rodapé */
 
 footer{
-    height: 25vh;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #353535;
+    color: rgb(238, 237, 237);
+    justify-content: space-around;
+    padding: 10px;
+    
+}
+
+.maparodape{
+    font-size: 14px;
+    padding: 5px;
+}
+
+.titulorodape{
+    border-bottom: 3px solid rgb(35, 114, 35);
+    padding-bottom: 3px;
+    margin-bottom: 17px;
+}
+
+.descrirodape{
+    margin-bottom: 10px;
+    padding: 4px;
+    border-bottom: #4e4e4e 1px solid;
+}
+
+.redesrodape{
+    height: 25px;
 }
 
 
 /* Página sobre */
 .qualifica{
-    background-color: rgb(173, 39, 39);
+    background-color: rgb(197, 73, 73);
+    height: 50vh;
+    padding: 15px;
+}
+
+.experiencia{
+    background-color: rgb(79, 116, 218);
     height: 50vh;
     padding: 15px;
 }
@@ -191,14 +225,21 @@ footer{
     margin-left: auto;
     margin-right: auto;
     padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    color: #3f3e3e;
+}
+
+.empresa{
+    margin: 20px 0;
 }
 
 .espacosobre{
-    height: 40vh;
+    height: 37vh;
 }
 
-.experiencia{
-    background-color: rgb(43, 92, 226);
+.espacosobreexp{
+    background-color: rgb(42, 148, 77);
     height: 50vh;
     padding: 15px;
 }
