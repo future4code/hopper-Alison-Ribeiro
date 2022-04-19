@@ -1,0 +1,64 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    color: white;
+}
+
+#main-container{
+    display: grid;
+    grid-template-rows: 30px 30px 7fr 2fr 2fr 1fr 1fr 30px;
+
+    grid-template-areas: 
+    "top menu menu menu"
+    "main main main main"
+    "main main main main"
+    "main2 main2 blank img"
+    "main2 main2 blank extra"
+    "rodpe rodpe rodpe rodpe"
+    ;
+    height: 100%;
+}
+
+.green-background {
+    background-color: green;
+    grid-area: top;
+    height: 30px;
+}
+
+.yellow-background {
+    grid-area: menu;
+    background-color: yellow;
+    height: 30px;
+}
+
+.pink-background {
+    background-color: fuchsia;
+    grid-area: main;
+}
+
+.blue-background {
+    background-color: blue;
+    grid-area: main2;
+}
+
+.blank{
+    grid-area: blank;
+}
+
+.red-background {
+    background-color: red;
+    grid-area: img;
+}
+
+.lightgreen-background {
+    background-color: lightgreen;
+    grid-area: extra;
+}
+
+.purple-background {
+    background-color: purple;
+    grid-area: rodpe;
+} 
