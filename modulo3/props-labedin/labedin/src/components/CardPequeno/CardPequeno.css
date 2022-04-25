@@ -1,5 +1,6 @@
 .minicard{
     display: flex;
+    justify-content: center;
     border: 1px solid;
     padding: 20px 10px;
     height: 55px;

@@ -13,10 +13,8 @@ const DivPageSection = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
-  div{
-    width: 40vw;
-    margin: 10px 0;
-  }
+  width: 40vw;
+  margin: 10px 0;
   div>h3{
     text-align: center;
   margin-bottom: 20px;
