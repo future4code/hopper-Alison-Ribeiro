@@ -1,0 +1,15 @@
+.minicard{
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    padding: 20px 10px;
+    height: 55px;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 40vw;
+}
+
+.iconemail{
+    height: 25px;
+    margin-right: 5px;
+}
