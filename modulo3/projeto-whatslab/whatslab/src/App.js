@@ -32,12 +32,10 @@ class App extends React.Component {
       {
         usuario: "",
         mensagem: ""
-      },
-      {
-        usuarioOn: "",
-        mensagemEnviada: ""
       }
-    ]
+    ],   
+        usuarioOn: "",
+        mensagemEnviada: "" 
   }
 
   adicionaMensagem = () => {    
@@ -47,7 +45,8 @@ class App extends React.Component {
     }
 
     const novaMsgm = [novaMsg, ...this.state.appMensagem]
-    this.setState({appMensagem: novaMsgm})
+    this.setState({appMensagem: novaMsgm, mensagemEnviada:""})
+  
   }
 
   onChangeNovoUsuario = (event) => {
