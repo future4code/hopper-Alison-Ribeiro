@@ -7,6 +7,13 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 `
+const Lista = styled.ol`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0;
+`
 
 class Etapa1 extends React.Component {
 
@@ -14,8 +21,8 @@ class Etapa1 extends React.Component {
 
     return (
       <MainContainer>
-                  <h1>Informações Gerais</h1>
-        <ol>
+        <Lista>
+          <h1>Informações Gerais</h1>
           <li>Qual o seu nome?</li>
           <input placeholder="Digite seu nome"></input>
           <li>Qual sua idade?</li>
@@ -23,8 +30,13 @@ class Etapa1 extends React.Component {
           <li>Qual seu e-mail?</li>
           <input placeholder="Digite seu email"></input>
           <li>Qual sua escolaridade?</li>
-
-        </ol>
+          <select>
+            <option>Ensino Médio Incompleto</option>
+            <option>Ensino Médio Completo</option>
+            <option>Ensino Superior Incompleto</option>
+            <option>Ensino Superior Completo</option>
+          </select>
+        </Lista>
   
       </MainContainer>
     );
