@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 import Etapa1 from "./Pages/Etapa1";
 import Etapa2 from "./Pages/Etapa2";
 import Etapa3 from "./Pages/Etapa3";
@@ -21,7 +22,7 @@ class App extends React.Component {
     etapa: 1
   }
 
-  proximaEtapa = () => {
+  renderEtapa = () => {
 
     switch (this.state.etapa) {
       case 1:
@@ -35,14 +36,19 @@ class App extends React.Component {
     }
   }
 
+  proximaEtapa = () => {
+    this.setState({etapa: this.state.etapa + 1})
+  }
+
   render () {
 
     return (
       <MainContainer>
-        {this.proximaEtapa}
+        {this.renderEtapa()}
 
-        <button onClick={this.proximaEtapa}>Próxoma Etapa</button>
-
+        {this.state.etapa !== 4 && (
+          <button onClick={this.proximaEtapa}>Próxoma Etapa</button>
+         )}
       </MainContainer>
     );
   }
