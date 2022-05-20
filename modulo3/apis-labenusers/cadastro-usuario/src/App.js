@@ -9,15 +9,20 @@ class App extends React.Component {
     tela: true
   }
 
+  mudaPagina = () => {
+    if (this.state.tela === true) {
+      this.setState ({tela: false})
+    } else {
+      this.setState ({tela: true})
+    }
+  }
     render() {
       return (<>
-        <button>Troca de tela</button>
-        <AddUsuario/>
-        <ListaUsuario/>
+        <button onClick={this.mudaPagina}>Troca de tela</button>
+        {this.state.tela === true?<AddUsuario />:<ListaUsuario />}
       </>
       )
     }
 }
-
 
 export default App;
