@@ -4,23 +4,34 @@ import axios from 'axios';
 import AddUsuario from './components/AddUsuario';
 import ListaUsuario from './components/ListaUsuario';
 
+const FormInserir = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: 350px;
+    height: 40vh;
+    align-items: center;
+    margin: auto auto;
+`
+
 class App extends React.Component {
   state = {
-    tela: true
+    tela: "cadastro"
   }
 
   mudaPagina = () => {
-    if (this.state.tela === true) {
-      this.setState ({tela: false})
+    if (this.state.tela === "cadastro") {
+      this.setState ({tela: "lista"})
     } else {
-      this.setState ({tela: true})
+      this.setState ({tela: "cadastro"})
     }
   }
     render() {
-      return (<>
+      return (<FormInserir>
         <button onClick={this.mudaPagina}>Troca de tela</button>
-        {this.state.tela === true?<AddUsuario />:<ListaUsuario />}
-      </>
+        {this.state.tela === "cadastro"?<AddUsuario />:<ListaUsuario />}
+      </FormInserir>
       )
     }
 }
