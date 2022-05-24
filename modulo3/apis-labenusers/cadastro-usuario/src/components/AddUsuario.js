@@ -6,7 +6,11 @@ const FormInserir = styled.div`
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    
+    height: 100%;
+    button{
+        background-color: black;
+        color: white;
+    }
 `
 
 class AddUsuario extends React.Component {

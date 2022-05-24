@@ -2,6 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import axios from 'axios';
 
+const Lista = styled.li`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 200px;
+    button{
+      background-color: black;
+      color: white;
+    }
+`
+
 class ListaUsuario extends React.Component {
   state = {
     cadastro: [],
@@ -53,10 +65,12 @@ class ListaUsuario extends React.Component {
           this.state.cadastro.map((lista) => {
             return (
               <ul>
-                <li>{lista.name}</li>
-                <button onClick={() => this.deleteUsuario(lista.id)}>
-                  Del
-                </button>
+                <Lista>{lista.name}
+                
+                  <button onClick={() => this.deleteUsuario(lista.id)}>
+                    Del
+                  </button>
+                </Lista>
               </ul>
             )
           })

@@ -8,9 +8,8 @@ const FormInserir = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    border: 1px solid gray;
-    width: 350px;
-    height: 40vh;
+    width: 250px;
+    height: 150px;
     align-items: center;
     margin: auto auto;
 `
@@ -28,10 +27,12 @@ class App extends React.Component {
     }
   }
     render() {
-      return (<FormInserir>
+      return (<>
         <button onClick={this.mudaPagina}>Troca de tela</button>
+      <FormInserir>
         {this.state.tela === "cadastro"?<AddUsuario />:<ListaUsuario />}
-      </FormInserir>
+      </FormInserir>     
+      </>      
       )
     }
 }
