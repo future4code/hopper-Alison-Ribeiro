@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { DetalhePlay } from "./styled";
 import axios from "axios";
 
 class DetalhesPlaylist extends React.Component {
@@ -31,9 +31,9 @@ class DetalhesPlaylist extends React.Component {
             <>
 
                 <div>
-                    <button onClick={() => this.detalhePlaylist(this.props.id)}>
+                    <DetalhePlay onClick={() => this.detalhePlaylist(this.props.id)}>
                         Detalhe
-                    </button>
+                    </DetalhePlay>
                     <ul>
                     {this.state.tracks.map((track) => {
                         return(

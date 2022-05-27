@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import axios from "axios";
-import DetalhesPlaylist from "./DetalhesPlaylist";
+import DetalhesPlaylist from "../DetalhesPlaylist/DetalhesPlaylist";
+import { Delete } from "./styled";
 
 class MinhasPlaylist extends React.Component {
     state = {
@@ -58,9 +59,9 @@ class MinhasPlaylist extends React.Component {
                                 <li key={playlist.id}>
                                     {playlist.name}
                                     <DetalhesPlaylist id={playlist.id} />
-                                    <button onClick={() => this.deletePlaylist(playlist.id)}>
+                                    <Delete onClick={() => this.deletePlaylist(playlist.id)}>
                                         Del
-                                    </button>
+                                    </Delete>
                                 </li>
                         )
                     })}

@@ -1,8 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import { BotaoAddPlay } from "./styled";
 import axios from "axios";
-
-
 
 class AddPlaylist extends React.Component {
     state = {
@@ -42,9 +40,9 @@ class AddPlaylist extends React.Component {
             value={this.state.nomePlaylist}
             onChange={this.onChangePlaylist}
           />
-          <button onClick={this.novaPlaylist}>
+          <BotaoAddPlay onClick={this.novaPlaylist}>
               Adiciona Playlist
-          </button>
+          </BotaoAddPlay>
       </div>
     );
   }
