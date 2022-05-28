@@ -6,11 +6,19 @@ import MinhasPlaylist from "./components/MinhasPlaylist/MinhasPlaylist";
 import RodaPe from "./pages/RodaPe";
 import Cabecalho from "./pages/Cabecalho";
 import { GlobalStyle } from "./GlobalStyle";
+import Fundomusic from "./assets/fundomusic.jpg"
+import { BotaoPadrao } from "./components/StylePadrao";
+import AddTracks from "./components/AddTracks/AddTracks";
 
-const BotaoMudaTela = styled.button`
-    background-color: black;
-    color: white;
-    border-radius: 5px;
+const Fundo = styled.div`
+    background-image: URL(${Fundomusic}) ;
+    background-repeat: repeat;
+`
+
+const Bloco = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 class App extends React.Component {
@@ -28,13 +36,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <Fundo>
         <GlobalStyle />
-        <Cabecalho />
-        <BotaoMudaTela onClick={this.mudaPagina}>Muda Tela</BotaoMudaTela>
-        {this.state.tela === "criaPlaylist" ? <AddPlaylist /> : <MinhasPlaylist />}
-        <RodaPe />
-      </div>
+          <Cabecalho />
+        <Bloco>
+          <BotaoPadrao onClick={this.mudaPagina}>Muda Tela</BotaoPadrao>
+          {this.state.tela === "criaPlaylist" ? <AddPlaylist /> : <MinhasPlaylist />}
+          <AddTracks />
+        </Bloco>
+          <RodaPe />
+      </Fundo>
     );
   }
 }

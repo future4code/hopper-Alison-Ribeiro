@@ -12,7 +12,7 @@ const RodaPeModelo = styled.footer`
     align-items: top;
     background-color: black;
     color: white;
-    font-size: 15px;
+    font-size: 12px;
 `
 
 const MapaRodape = styled.div`
@@ -22,7 +22,7 @@ const MapaRodape = styled.div`
     flex-direction: column;
 `
 
-const TituloRodape = styled.h3`
+const TituloRodape = styled.h4`
     margin: 10px 0;
     border-bottom: 1px solid white;
     padding: 5px 0;
@@ -30,7 +30,6 @@ const TituloRodape = styled.h3`
 
 const MenuRodape = styled.a`
    margin: 10px 0;
-   text-indent: 10px;
    text-decoration: none;
    color: white;
 `
@@ -45,7 +44,6 @@ const RedesRodape = styled.img`
 
 const Descricao = styled.p`
     margin: 10px 0;
-    text-indent: 10px;
     text-decoration: none;
     color: white;
 `

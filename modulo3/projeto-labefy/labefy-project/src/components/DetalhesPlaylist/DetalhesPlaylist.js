@@ -1,6 +1,7 @@
 import React from "react";
 import { DetalhePlay } from "./styled";
 import axios from "axios";
+import { BotaoPadrao } from "../StylePadrao";
 
 class DetalhesPlaylist extends React.Component {
     state = {
@@ -31,14 +32,14 @@ class DetalhesPlaylist extends React.Component {
             <>
 
                 <div>
-                    <DetalhePlay onClick={() => this.detalhePlaylist(this.props.id)}>
+                    <BotaoPadrao onClick={() => this.detalhePlaylist(this.props.id)}>
                         Detalhe
-                    </DetalhePlay>
+                    </BotaoPadrao>
                     <ul>
                     {this.state.tracks.map((track) => {
                         return(
                                 <li key={track.id}>
-                                    {track.name}-
+                                    {track.name} - 
                                     {track.artist}
 
                                 </li>

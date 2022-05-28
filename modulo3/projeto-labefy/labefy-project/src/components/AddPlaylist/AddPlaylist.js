@@ -1,6 +1,19 @@
 import React from "react";
-import { BotaoAddPlay } from "./styled";
 import axios from "axios";
+import { BotaoPadrao } from "../StylePadrao";
+import styled from "styled-components"
+
+const BlocoAddPlaylist = styled.div`
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #D24D57;
+    background-color: white;
+    opacity: 0.5;
+`
+
+const caixaAddPlaylist = styled.input`
+    border-radius: 5px;
+`
 
 class AddPlaylist extends React.Component {
     state = {
@@ -34,16 +47,16 @@ class AddPlaylist extends React.Component {
 
   render() {
     return (
-      <div>
+      <BlocoAddPlaylist>
           <input
             placeholder="Nome da Playlist"
             value={this.state.nomePlaylist}
             onChange={this.onChangePlaylist}
           />
-          <BotaoAddPlay onClick={this.novaPlaylist}>
+          <BotaoPadrao onClick={this.novaPlaylist}>
               Adiciona Playlist
-          </BotaoAddPlay>
-      </div>
+          </BotaoPadrao>
+      </BlocoAddPlaylist>
     );
   }
 }
