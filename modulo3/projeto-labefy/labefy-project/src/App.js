@@ -40,9 +40,12 @@ class App extends React.Component {
         <GlobalStyle />
           <Cabecalho />
         <Bloco>
-          <BotaoPadrao onClick={this.mudaPagina}>Muda Tela</BotaoPadrao>
-          {this.state.tela === "criaPlaylist" ? <AddPlaylist /> : <MinhasPlaylist />}
-          <AddTracks />
+          {/* <BotaoPadrao onClick={this.mudaPagina}>Muda Tela</BotaoPadrao> */}
+          <MinhasPlaylist />
+          <div>
+            <AddPlaylist />
+            <AddTracks />            
+          </div>
         </Bloco>
           <RodaPe />
       </Fundo>

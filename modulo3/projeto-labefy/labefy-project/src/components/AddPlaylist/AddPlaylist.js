@@ -6,9 +6,15 @@ import styled from "styled-components"
 const BlocoAddPlaylist = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     border: 2px solid #D24D57;
-    background-color: white;
-    opacity: 0.5;
+    background-color: rgba(105, 105, 205, 0.4);
+    border-radius: 5px;
+    margin: 15px 0;
+`
+
+const BoxAdd = styled.input`
+    margin: 10px 0;
 `
 
 const caixaAddPlaylist = styled.input`
@@ -48,7 +54,8 @@ class AddPlaylist extends React.Component {
   render() {
     return (
       <BlocoAddPlaylist>
-          <input
+          <h3>Criar nova Playlist</h3>
+          <BoxAdd
             placeholder="Nome da Playlist"
             value={this.state.nomePlaylist}
             onChange={this.onChangePlaylist}

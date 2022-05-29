@@ -1,6 +1,22 @@
 import React from "react";
 import axios from "axios";
 import { BotaoPadrao } from "../StylePadrao";
+import styled from "styled-components";
+
+const AddTracksBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid #D24D57;
+    background-color: rgba(105, 105, 205, 0.4);
+    border-radius: 5px;
+    margin: 15px 0;
+    padding: 15px 0;
+`
+
+const BoxAdd = styled.input`
+    margin: 10px 0;
+`
 
 class AddTracks extends React.Component {
     state = {
@@ -47,18 +63,18 @@ class AddTracks extends React.Component {
 
     render() {
         return(
-            <>
-                <input
+            <AddTracksBox>
+                <BoxAdd
                     placeholder="Nome da Música"
                     value={this.state.nomeTrack}
                     onChange={this.AddNomeMusica}
                 />
-                <input
+                <BoxAdd
                     placeholder="Nome do Artista"
                     value={this.state.artistaTrack}
                     onChange={this.AddNomeArtista}
                 />
-                <input
+                <BoxAdd
                     placeholder="Link da Música"
                     value={this.state.linkTrack}
                     onChange={this.AddLinkMusica}
@@ -66,7 +82,7 @@ class AddTracks extends React.Component {
                 <BotaoPadrao onClick={() => this.novaTrack(this.props.id)}>
                     Adicionar Música
                 </BotaoPadrao>
-            </>
+            </AddTracksBox>
         )
     }
 }
