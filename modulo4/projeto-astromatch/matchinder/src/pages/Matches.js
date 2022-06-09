@@ -5,7 +5,6 @@ import UserImg from "../assets/user.svg"
 import api from "../config/configApi";
 
 function Matches (props) {
-
     const [perfil, setPerfil] = useState({
         // id: "",
         // age: 0,
@@ -14,7 +13,8 @@ function Matches (props) {
         // photo_alt: "",
         // name: ""
     })
-
+    const [match, setMatch] = useState([])
+       
     useEffect(() => {
         mostraPerfil()
     }, [])
@@ -22,10 +22,37 @@ function Matches (props) {
     const mostraPerfil = async () => {
         try{
             const response = await api.get("/person")
-            console.log(response.data.profile)
             setPerfil(response.data.profile)
         }catch(error){
             console.log(error.response.data)
+        }
+    }
+
+    const escolhePerfil = async (choice) => {
+        const body = {
+            id: perfil.id,
+            choice: 'true'
+        }
+        try {
+            const response = await api.post("/choose-person", body)
+            setMatch(response.data.profile)
+            mostraPerfil()
+        }catch(error) {
+            console.log(error.response, 'erreiaqui')
+        }
+    }
+
+    const discartPerfil = async () => {
+        const body = {
+            id: perfil.id,
+            choice: 'true'
+        }
+        try {
+            const response = await api.post("/choose-person", body)
+            setMatch(response.data.profile)
+            mostraPerfil()
+        }catch(error) {
+            console.log(error.data, 'não foiaqui')
         }
     }
 
@@ -34,26 +61,22 @@ function Matches (props) {
             <Cabecalho>
                 <div></div>
                 <Logo src={LogoMarca}></Logo>
-                <User src={UserImg} ></User>
+                <User src={UserImg} onClick={() => props.MeusMatchs('matches')}></User>
             </Cabecalho>
             <div>                
-                {/* {perfil.map((result) => { */}
-                    {/* return ( */}
-                        <BoxPerfil key={perfil.id}>
-                            <img src={perfil.photo} alt={perfil.photo_alt} />
-                            <div>
-                                <h1>{perfil.name}, {perfil.age}</h1>
-                                <p>{perfil.bio}</p>
-                            </div>
-                        </BoxPerfil>
-                    {/* ) */}
-                {/* })} */}
-                
+                <BoxPerfil key={perfil.id}>
+                    <img src={perfil.photo} alt={perfil.photo_alt} />
+                    <div>
+                        <h1>{perfil.name}, {perfil.age}</h1>
+                        <p>{perfil.bio}</p>
+                    </div>
+                </BoxPerfil>
                 <Rodape>
-                    <BotaoXMatch>X</BotaoXMatch>
-                    <BotaoMatch>♥️</BotaoMatch>
+                    <BotaoXMatch onClick={discartPerfil}>X</BotaoXMatch>
+                    <BotaoMatch onClick={escolhePerfil}>♥️</BotaoMatch>
                 </Rodape>
             </div>
+            <button onClick={props.recomecar}>Recomeçar</button>
         </div>
     )
 }

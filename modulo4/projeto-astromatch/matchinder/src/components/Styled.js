@@ -131,3 +131,28 @@ export const BotaoMatch = styled.button`
     box-shadow: rgb(205 205 205 / 73%) 0px 0px 15px 0px;
     overflow: hidden;
 `
+
+export const ListaMatch = styled.li`
+    display: flex;
+    height: 70px;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    align-items: center;
+    list-style: none;
+    `
+
+export const Foto = styled.div`
+    height: 65px;
+    width: 65px;
+    margin: 0 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    img{
+      height: 100%;
+      width: 65px;
+      border-radius: 50px;
+    }
+
+`
