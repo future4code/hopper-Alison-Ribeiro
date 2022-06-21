@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import Router from './routes/Router';
 import './App.css';
+import { GlobalStyle } from './styled/StyledPageUser';
+import AdminHomePage from './pages/AdminHomePage';
+import ApplicationFormPage from './pages/ApplicationFormPage';
+import CrerateTripPage from './pages/CreateTripPage';
+import ListTripsPage from './pages/ListTripsPage';
+import LoginPage from './pages/LoginPage';
+import TripDetailsPage from './pages/TripDetailsPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyle />
+      <Router />
+      <AdminHomePage/>
+      <ApplicationFormPage/>
+      <CrerateTripPage/>
+      <ListTripsPage/>
+      <LoginPage/>
+      <TripDetailsPage/>
     </div>
   );
 }
