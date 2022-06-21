@@ -1,8 +1,5 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
-import fundoUser from '../assets/fundohomepage.jpg'
-import cabine from '../assets/cabine-turismo-espacial.jpg'
-import painel from '../assets/painel.webp'
 import fundouser2 from '../assets/astronautaviagem.jpg'
 
 export const GlobalStyle = createGlobalStyle`
