@@ -1,0 +1,245 @@
+/* Configutação do cabeçalho */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+img.toplogo{
+    height: 25px;
+    border:0px;
+}
+
+button.top{
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(43, 92, 226);
+    width: 130px;
+    height: 40px;
+    color: white;
+}
+
+.menu{
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(43, 92, 226);
+    height: 40px;
+    padding: 0px 15px;
+    color: white;
+}
+
+.menu:hover{
+    background-color: rgb(35, 114, 35);
+}
+
+button.top:hover{
+    background-color: rgb(35, 114, 35);
+}
+
+a.botaocabecalho{
+    text-decoration: none;
+    color: aliceblue;    
+}
+
+/* configuração conteúdo do portfolio - apresentação */
+div.corpoforaap{
+    background-color: rgb(197, 73, 73);
+    height: 50vh;
+}
+
+div.corpoap{
+    width: 75%;
+    padding-top: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.apinicial{
+    border-radius: 10px;
+    background-color: #e6effc;
+    margin: 15px 0px;
+    text-align: center;
+}
+
+.aptitulo{
+    color: #4e4e4e;
+}
+
+.apresentacao{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #444444;
+}
+
+p.apdescricao{
+    color: #4e4e4e;
+}
+
+.apservicos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div.job{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #e6effc;
+    width: 25%;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    height: 320px;
+}
+
+img.servicoimg{
+    height: 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 1vw 0px;
+}
+
+h4.jobtitulo{
+    padding: 1vw 0px;
+}
+
+/* espaço em branco */
+
+div.espaco{
+    height: 35vh;
+    background-color: white;
+}
+
+/* configuração conteúdo do portfolio - trabalhos realizados */
+
+div.corpoforatrab{
+    background-color: rgb(59, 187, 87);
+    height: 55vh;
+}
+
+.corpotrab{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 85vh;
+}
+
+.apresentacaotrab{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.trabservicos{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.trab{
+    background-color: #e6effc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.trab2{
+    flex-direction: row-reverse;
+}
+
+.trab4{
+    flex-direction: row-reverse;
+}
+
+img.trabimg{
+    height: 15vh;
+    border-radius: 5px;
+}
+
+
+/* configuração do rodapé */
+
+footer{
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #353535;
+    color: rgb(238, 237, 237);
+    justify-content: space-around;
+    padding: 10px;
+    
+}
+
+.maparodape{
+    font-size: 14px;
+    padding: 5px;
+}
+
+.titulorodape{
+    border-bottom: 3px solid rgb(35, 114, 35);
+    padding-bottom: 3px;
+    margin-bottom: 17px;
+}
+
+.descrirodape{
+    margin-bottom: 10px;
+    padding: 4px;
+    border-bottom: #4e4e4e 1px solid;
+}
+
+.redesrodape{
+    height: 25px;
+}
+
+
+/* Página sobre */
+.qualifica{
+    background-color: rgb(197, 73, 73);
+    height: 50vh;
+    padding: 15px;
+}
+
+.experiencia{
+    background-color: rgb(79, 116, 218);
+    height: 50vh;
+    padding: 15px;
+}
+
+.corposobre{
+    background-color: #e6effc;
+    width: 75%;
+    padding-top: 5px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+    color: #3f3e3e;
+}
+
+.empresa{
+    margin: 20px 0;
+}
+
+.espacosobre{
+    height: 37vh;
+}
+
+.espacosobreexp{
+    background-color: rgb(42, 148, 77);
+    height: 50vh;
+    padding: 15px;
+}
