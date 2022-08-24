@@ -157,7 +157,34 @@ const ErrorsEdit:{[chave:string]:{status:number,message:string}}={
     })
 
 // Exercício 6
+app.delete("/produtos/delete", (req: Request, res: Response) => {
+  try {
+      const produtoId = req.query.produtoId
 
+      if(!produtoId){
+          throw new Error(Errors.PRODUTO_NOT_FOUND.message)
+      }
+
+      Produtos.find(produto => {
+          if(produto.id === Number(produtoId)){
+              const index = Produtos.indexOf(produto)
+              Produtos.splice(index, 1)
+          }
+      })
+
+      res.status(200).send(Produtos)
+
+  } catch (error: any) {
+      switch(error.message){
+          case Errors.PRODUTO_NOT_FOUND.message:
+              res.status(Errors.PRODUTO_NOT_FOUND.status).send(Errors.PRODUTO_NOT_FOUND.message)
+              break;
+          default:
+              res.status(Errors.SOME_ERROR.status).send(Errors.SOME_ERROR.message)
+      }
+  }
+  
+})
 
 
 const server = app.listen(process.env.PORT || 3003, () => {
