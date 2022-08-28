@@ -25,7 +25,7 @@ type Conta = {
 
 export type InfoConta = Cliente & Conta
 
-const gerarId = ((len :number) => {
+export const gerarId = ((len :number) => {
     let idAleat = ''
 
     do {
