@@ -1,0 +1,1 @@
+select * from tbFuncionarios where id = 003;
