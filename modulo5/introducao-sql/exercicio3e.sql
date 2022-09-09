@@ -1,0 +1,1 @@
+select * from tbFuncionarios where nome not like '%r%' and email like "%u%";

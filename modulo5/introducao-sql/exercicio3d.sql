@@ -1,0 +1,1 @@
+select * from tbFuncionarios where nome like '%a%';
