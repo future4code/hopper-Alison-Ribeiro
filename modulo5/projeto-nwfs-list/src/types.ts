@@ -10,9 +10,22 @@ export const gerarId = ((len :number) => {
 })
 
 // Tipo de objeto definido
-export type Usuario = {
+export type USUARIO = {
     id: string,
     nome: string,
     nickname: string,
     email: string
+}
+
+export type EDITAUSUARIO = {
+    nome: string,
+    nickname: string
+}
+
+export type CADTAREFA = {
+    id: string,
+    titulo: string,
+    descricao: string,
+    data_limite: Date,
+    usuario_criador_id: string
 }

@@ -2,7 +2,7 @@ import { AddressInfo } from "net";
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import connection from "./database/connection";
-import { gerarId, Usuario } from "./types";
+import { gerarId, USUARIO, EDITAUSUARIO, CADTAREFA } from "./types";
 
 const app: Express = express();
 
@@ -52,7 +52,7 @@ app.post("/user", async (req: Request, res: Response) => {
       throw new Error("Email já existe");
     }
 
-    const novoUsuario: Usuario = {
+    const novoUsuario: USUARIO = {
       id: gerarId(20),
       nome,
       nickname,
@@ -115,8 +115,7 @@ app.put("/user/edit/:id", async (req: Request, res: Response) => {
   let errorCode = 400;
   try {
     const id = req.params.id;
-    const nome = req.body.nome;
-    const nickname = req.body.nickname;
+    const { nome, nickname } = req.body.nome;
 
     const idUsuario = await connection.raw(`
       SELECT * FROM tbUsuario WHERE id = "${id}"
@@ -127,7 +126,67 @@ app.put("/user/edit/:id", async (req: Request, res: Response) => {
       throw new Error("Usuário não encontrado");
     }
 
-    
+    if (!nome || !nickname) {
+      errorCode = 422;
+      throw new Error("Faltam dados para alteração");
+    }
+
+    await connection.raw(`
+      UPDATE tbUsuario SET nome = "${nome}", nickname = "${nickname}" WHERE id = "${id}"
+    `);
+
+    res.status(200).send("Alteração Realizada");
+  } catch (error) {
+    res.status(errorCode).send(error.message);
+  }
+});
+
+app.post("/task", async (req: Request, res: Response) => {
+  let errorCode = 400;
+  try {
+    const { titulo, descricao, data_limite, usuario_criador_id } = req.body;
+
+    if (!titulo || !descricao || !data_limite || !usuario_criador_id) {
+      errorCode = 422;
+      throw new Error("Faltam Informações");
+    }
+
+    const novaTarefa: CADTAREFA = {
+      id: gerarId(20),
+      titulo,
+      descricao,
+      data_limite: data_limite.split("/").reverse().join("/"),
+      usuario_criador_id,
+    };
+
+    await connection.raw(`
+      INSERT INTO tbTarefas(id, titulo, descricao, data_limite, usuario_criador_id)
+      VALUES("${novaTarefa.id}", "${novaTarefa.titulo}", "${novaTarefa.descricao}", "${novaTarefa.data_limite}", "${novaTarefa.usuario_criador_id}")
+    `);
+
+    res.status(200).send("Cadastro realizado");
+  } catch (error) {
+    res.status(errorCode).send(error.message);
+  }
+});
+
+app.get("/task/:id", async (req: Request, res: Response) => {
+  let errorCode = 400;
+  try {
+    const id = req.params.id;
+
+    const idUsuario = await connection.raw(`
+      SELECT * FROM tbUsuario WHERE id = "${id}"
+    `);
+
+    if (idUsuario[0] !== 0) {
+      errorCode = 422;
+      throw new Error("Usuário não encontrado");
+    }
+
+    const resultado = await connection.raw(`
+      SELECT tbTarefas.id as IdTarefa, tbTarefas.titulo as Tarefa, tbTarefas.descricao as Descricao, tbTarefas.data_limite as DATA_Limite, tbTarefas.status as Status, tbTarefas.usuario_criador_id as ID_Usuario, tbUsuario.nickname as Nickname FROM tbTarefas INNER JOIN tbUsuario WHERE tbTarerfas.id = "${id}"
+    `)
 
   } catch (error) {
     res.status(errorCode).send(error.message);
