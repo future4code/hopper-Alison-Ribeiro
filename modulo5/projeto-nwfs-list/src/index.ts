@@ -81,7 +81,7 @@ app.get("/user/:id", async (req: Request, res: Response) => {
           SELECT * FROM tbUsuario WHERE id = "${id}"
         `);
 
-    if (idUsuario[0] !== 0) {
+    if (idUsuario[0].length !== 0) {
       errorCode = 422;
       throw new Error("Usuário não encontrado");
     }
@@ -90,7 +90,7 @@ app.get("/user/:id", async (req: Request, res: Response) => {
           SELECT * FROM tbUsuario WHERE nickname = "${nickname}"
         `);
 
-    if (nickUsuario[0] !== 0) {
+    if (nickUsuario[0].length !== 0) {
       errorCode = 422;
       throw new Error("Usuário não encontrado");
     }
@@ -121,7 +121,7 @@ app.put("/user/edit/:id", async (req: Request, res: Response) => {
       SELECT * FROM tbUsuario WHERE id = "${id}"
     `);
 
-    if (idUsuario[0] !== 0) {
+    if (idUsuario[0].length !== 0) {
       errorCode = 422;
       throw new Error("Usuário não encontrado");
     }
@@ -175,18 +175,20 @@ app.get("/task/:id", async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
 
-    const idUsuario = await connection.raw(`
-      SELECT * FROM tbUsuario WHERE id = "${id}"
+    const idTarefa = await connection.raw(`
+      SELECT * FROM tbTarefas where id = "${id}"
     `);
 
-    if (idUsuario[0] !== 0) {
+    if (idTarefa[0].length !== 0) {
       errorCode = 422;
-      throw new Error("Usuário não encontrado");
+      throw new Error("Tarefa não encontrada");
     }
 
     const resultado = await connection.raw(`
-      SELECT tbTarefas.id as IdTarefa, tbTarefas.titulo as Tarefa, tbTarefas.descricao as Descricao, tbTarefas.data_limite as DATA_Limite, tbTarefas.status as Status, tbTarefas.usuario_criador_id as ID_Usuario, tbUsuario.nickname as Nickname FROM tbTarefas INNER JOIN tbUsuario WHERE tbTarerfas.id = "${id}"
+      SELECT tbTarefas.id as IdTarefa, tbTarefas.titulo as Tarefa, tbTarefas.descricao as Descricao, tbTarefas.data_limite as DATA_Limite, tbTarefas.status as Status, tbTarefas.usuario_criador_id as ID_Usuario, tbUsuario.nickname as Nickname FROM tbTarefas INNER JOIN tbUsuario WHERE tbTarefas.id = "${id}"
     `)
+
+    res.status(200).send(resultado[0]);
 
   } catch (error) {
     res.status(errorCode).send(error.message);
