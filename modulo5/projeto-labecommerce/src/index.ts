@@ -5,6 +5,8 @@ import {cadUsers} from './endpoints/cadUsuers'
 import { getUsers } from "./endpoints/getUsers";
 import { cadProduct } from './endpoints/cadProduct';
 import { getProducts } from './endpoints/getProducts';
+import { regPurchase } from './endpoints/regPurchases';
+import { getPurchases } from './endpoints/getPurchases';
 
 const app = express();
 
@@ -28,3 +30,11 @@ app.post("/products", cadProduct)
 
 // GET products
 app.get("/products", getProducts)
+
+// POST registro de compra
+app.post("/purchases", regPurchase)
+
+// GET compras
+app.get("users/:user_id/purchases", getPurchases)
+
+// app.get("/purchases", getPurchases)

@@ -20,7 +20,7 @@ export const getProducts = async (req: Request, res: Response) => {
       .limit(limit)
       .offset(offset)
 
-      return res.status(200).send({ users: result });
+      return res.status(200).send({ products: result });
     }
 
     const [result] = await connection(TABLE_PRODUCTS)
@@ -29,7 +29,7 @@ export const getProducts = async (req: Request, res: Response) => {
     .limit(limit)
     .offset(offset)
 
-    res.status(200).send({ users: result });
+    res.status(200).send({ products: result });
   } catch (error) {
     res.status(errorCode).send({ message: error.message });
   }
