@@ -46,5 +46,6 @@ Content-Type: application/json
 ### Busca por compras registradas
 GET http://localhost:3003/users/bot6s51n8v5gg7bey96j/purchases
 
+
 ### Buscar por registro
 GET http://localhost:3003/purchases

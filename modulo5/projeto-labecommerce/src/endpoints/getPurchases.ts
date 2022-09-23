@@ -1,20 +1,24 @@
 import { Request, Response } from "express";
 import connection from "../database/connection";
-import { TABLE_COMPRA } from "../database/tableNames";
+import { TABLE_COMPRA, TABLE_USERS } from "../database/tableNames";
 
 export const getPurchases = async (req: Request, res: Response) => {
   let errorCode = 400;
   try {
-    const user_id = req.params.id;
+    const user_id = req.params.user_id;
     const sort = req.query.sort || "total_price";
     const order = req.query.order || "asc";
     const limit = Number(req.query.limit) || 10;
     const page = Number(req.query.page) || 1;
     const offset = limit * (page - 1);
 
+    if(!user_id) {
+        throw new Error("Usuario sem identificação");        
+    }
+
     const result = await connection(TABLE_COMPRA)
       .select()
-      .where(`${TABLE_COMPRA}.user_id`, "=", `${user_id}`)
+      .where("user_id", "=", `${user_id}`)
       .orderBy(`${sort}`, `${order}`)
       .limit(limit)
       .offset(offset);

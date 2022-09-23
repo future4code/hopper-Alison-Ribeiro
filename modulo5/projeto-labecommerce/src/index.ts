@@ -35,6 +35,6 @@ app.get("/products", getProducts)
 app.post("/purchases", regPurchase)
 
 // GET compras
-app.get("users/:user_id/purchases", getPurchases)
+app.get("/users/:user_id/purchases", getPurchases)
 
 // app.get("/purchases", getPurchases)
