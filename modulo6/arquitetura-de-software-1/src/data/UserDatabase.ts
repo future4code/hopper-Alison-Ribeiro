@@ -6,18 +6,18 @@ export class UserDatabase extends BaseDatabase{
     public createUser = async (user: user) => {
 
         try {
-          await UserDatabase.connection("User_Arq").insert({
+          await UserDatabase.connection.insert({
             id: user.id,
             name: user.name,
             email: user.email,
             password: user.password,
-          });
+          }).into("User_Arq");
 
         } catch (error: any) {
           throw new Error(error.message);
         }
       };
-    
+
       public getUsers = async () => {
 
         try {

@@ -4,7 +4,7 @@ export class UserBusiness {
 
   public createUser = async (input: any) => {
     let errorCode = 400;
-    
+
     try {
       const { name, email, password } = input;
 
@@ -59,7 +59,7 @@ export class UserBusiness {
       if (userExist.length === 0) {
         throw new Error("Usuario não encontrado");
       }
-      
+
       await userDataBase.deleteUser(userId);
 
     } catch (error: any) {

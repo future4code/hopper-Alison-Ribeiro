@@ -12,4 +12,4 @@ Content-Type: application/json
 GET http://localhost:3003/allUser
 
 ### Deleta usuário por id
-DELETE http://localhost:3003/user/1665493987097
+DELETE http://localhost:3003/user/1666129343770

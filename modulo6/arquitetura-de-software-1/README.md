@@ -1,7 +1,7 @@
 # To Do List
 
 ## ESTRUTURA DE DADOS  
-  
+
 * ## Usuários
   * id
   * name
@@ -16,7 +16,7 @@
   * status: `"to_do" || "doing" || "done"`
   * author 
   * assignees
-   
+
 ---
 
 ## CRIAÇÃO DE TABELAS - MySql
