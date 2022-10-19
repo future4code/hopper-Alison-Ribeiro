@@ -1,0 +1,23 @@
+### Criar usuário
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "Alison",
+    "email": "alison@alison.com",
+    "password": "123456"
+}
+
+### Busca todos os usuários
+GET http://localhost:3003/user/all
+
+###Criar cadastro de filmes
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{
+    "title": "Canção do Coração",
+    "description": "Evan, um músico talentoso, foge do orfanato e vai a Nova York em busca de seus pais",
+    "duration_in_minutes": 114,
+    "year_of_release":2007
+}
