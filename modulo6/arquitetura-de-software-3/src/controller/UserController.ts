@@ -1,3 +1,4 @@
+import { UserInputDTO } from './../model/userDTO';
 import { Request, Response } from "express";
 import { UserBusiness } from "../business/UserBusiness";
 
@@ -6,10 +7,16 @@ export class UserController {
   async create(req: Request, res: Response):Promise<void> {
 
     try {
-      const { email, name, password } = req.body;
+      const { name, email, password } = req.body;
+
+      const input: UserInputDTO = {
+        name,
+        email,
+        password
+      }
 
       const userBusiness = new UserBusiness();
-      await userBusiness.create({ email, name, password });
+      await userBusiness.create(req.body);
 
       res.status(201).send({ message: "Usuário cadastrado com sucesso" });
 

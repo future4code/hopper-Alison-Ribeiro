@@ -1,5 +1,5 @@
 import { MovieDatabase } from "./../data/MovieDatabase";
-import { Movie } from "../types/Movie";
+import { Movie } from "../model/Movie";
 
 export class MovieBusiness {
 

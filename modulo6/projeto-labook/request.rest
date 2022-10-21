@@ -1,0 +1,17 @@
+### Criar Usuário
+POST http://localhost:3003/users/create
+Content-Type: application/json
+
+{
+    "name": "Alison",
+    "email": "alison@alison.com",
+    "password": "123456"
+}
+
+### Criar post
+POST http://localhost:3003/post/create
+Content-Type: application/json
+
+{
+    
+}
