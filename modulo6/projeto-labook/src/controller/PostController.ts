@@ -6,14 +6,14 @@ import { CustomError } from "../error/CustomError";
 export class PostController {
     async create( req: Request, res: Response) :Promise<void> {
         try {
-            const {photo, description, type, createdAt, authorId} = req.body
+            const {photo, description, type, created_at, author_id} = req.body
 
             const input: PostInsertDTO = {
                 photo,
                 description,
                 type,
-                createdAt,
-                authorId
+                created_at,
+                author_id
             }
 
             const postBusiness = new PostBusiness()
@@ -24,7 +24,5 @@ export class PostController {
         } catch (error) {
             throw new CustomError(error.statusCode, error.message || error.sqlMessage);
         }
-    }
-
-    
+    }    
 }

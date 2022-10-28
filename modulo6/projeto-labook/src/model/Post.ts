@@ -1,13 +1,13 @@
 import { POST_TYPES } from "./PostTypes"
 
-export class User {
+export class Post {
     constructor(
       private id: string,
       private photo: string,
       private description: string,
       private type: POST_TYPES,
-      private createdAt: Date,
-      private authorId: string
+      private created_at: Date,
+      private author_id: string
     ) { }
     
     getId() {
@@ -27,11 +27,11 @@ export class User {
     }
 
     getcreateAt() {
-      return this.createdAt
+      return this.created_at
       }
 
     getauthorId() {
-      return this.authorId
+      return this.author_id
     }  
   
     setId(newId: string) {
@@ -51,11 +51,11 @@ export class User {
     }
 
     setCreatedAt(newCreratedAt: Date) {
-      this.createdAt = newCreratedAt
+      this.created_at = newCreratedAt
     }
 
     setAuthorId(newAuthorId: string) {
-      this.authorId = newAuthorId
+      this.author_id = newAuthorId
     }
   }
   

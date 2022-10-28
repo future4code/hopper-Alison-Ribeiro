@@ -9,9 +9,9 @@ export class PostBusiness {
     public create = async (input: PostInsertDTO) => {
 
         try {
-            const {photo, description, type, createdAt, authorId} = input
+            const {photo, description, type, created_at, author_id} = input
 
-            if (!photo || !description || !type || !createdAt || !authorId) {
+            if (!photo || !description || !type || !created_at || !author_id) {
                 throw new InvalidRequest()
             }
 
@@ -24,8 +24,8 @@ export class PostBusiness {
                 photo,
                 description,
                 type,
-                createdAt,
-                authorId
+                created_at,
+                author_id
             })
 
         } catch (error) {
