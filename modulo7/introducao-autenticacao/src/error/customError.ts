@@ -4,6 +4,13 @@ export class CustomError extends Error {
     }
 }
 
+//Dados Faltando
+export class InvalidData extends CustomError{
+    constructor(){
+        super(400, "Faltando Dados.")
+    }
+}
+
 //Nome inválido
 export class InvalidName extends CustomError{ 
     constructor(){
