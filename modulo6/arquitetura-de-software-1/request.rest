@@ -1,0 +1,15 @@
+### Cadastro de usuários
+POST http://localhost:3003/createUser
+Content-Type: application/json
+
+{
+	"name": "Michael Scott",
+	"email": "michael@dundermifflin.com",
+	"password": "theboss"	
+}
+
+### Busca todos os usuários
+GET http://localhost:3003/allUser
+
+### Deleta usuário por id
+DELETE http://localhost:3003/user/1666129343770
