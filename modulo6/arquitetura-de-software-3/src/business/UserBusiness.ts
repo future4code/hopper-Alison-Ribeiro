@@ -1,35 +1,43 @@
-import { UserDatabase } from "../data/UserDatabase"
+import { UserInputDTO } from "./../model/userDTO";
+import { UserDatabase } from "../data/UserDatabase";
 
 export class UserBusiness {
 
-  async create({ email, name, password }: any):Promise<void> {
+  public create = async (input: UserInputDTO) => {
 
-    if (!email || !name || !password) {
-      throw new Error("Dados inválidos (email, name, password)")
+    try {
+      const { name, email, password } = input;
+
+      if (!email || !name || !password) {
+        throw new Error("Dados inválidos (name, email, password)");
+      }
+
+      const id = Date.now().toString();
+
+      const userDatabase = new UserDatabase();
+
+      await userDatabase.createUser({
+        id,
+        name,
+        email,
+        password,
+      });
+
+    } catch (error) {
+      throw new Error(error.message);
     }
+  };
 
-    const id = Date.now().toString();
+  public getAll = async () => {
 
-    const userDatabase = new UserDatabase()
-
-    await userDatabase.create({
-      id,
-      name,
-      email,
-      password
-    })
-  }
-
-  async getAll() {
     try {
       const userDatabase = new UserDatabase();
       const result = await userDatabase.getAll();
-      
-      return result
 
+      return result;
+      
     } catch (error: any) {
       throw new Error(error.message);
     }
-  }
-
+  };
 }

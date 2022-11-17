@@ -1,0 +1,29 @@
+// Cadastro de Usuário
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "name": "Alison", 
+   "nickname": "alisonluri", 
+   "email": "alisonluri@alisonluri.com",
+   "password": "123456"
+}
+
+### Realização de ligin - Cria Token
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email": "alisonluri@alisonluri.com",
+    "password": "123456"
+}
+
+### Editar Cadastro
+PUT http://localhost:3003/user/edit
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM0N2YwYTgxLTk0MjItNGQ2Ni05OGMzLWNiM2JkYWYwYTg0NSIsImlhdCI6MTY2NzM0MTczOCwiZXhwIjoxNjY3NDI4MTM4fQ.pVdLLUG1X_OTrshAn-62aiwzTWnrQTRdcRdMEsrqZoM
+Content-Type: application/json
+
+{
+    "name": "Alison Lucas",
+    "nickname": "megatazo"
+}

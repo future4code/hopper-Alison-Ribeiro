@@ -1,0 +1,24 @@
+### Criar Usuário
+POST http://localhost:3003/users/create
+Content-Type: application/json
+
+{
+    "name": "Alison Lucas",
+    "email": "alisonLu@alison.com",
+    "password": "123456"
+}
+
+### Criar post
+POST http://localhost:3003/post/create
+Content-Type: application/json
+
+{
+    "photo": "https://media.gazetadopovo.com.br/2022/04/11211931/PHOTO-2022-04-11-17-25-54-960x540.jpg",
+    "description": "Esta é a história do Javaporco e o Tucano",
+    "type": "normal",
+    "created_at": "2022/10/22",
+    "author_id": "7grxeov0cam1oih6w7yw"
+}
+
+### Busca posta por Id
+GET http://localhost:3003/post/4c40e2u3lfoe0ss7nvfp
