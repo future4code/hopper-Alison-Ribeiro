@@ -1,0 +1,1 @@
+* a) Salt é o processo irreversível de transformar um dado em uma string aparentemente aleatória. Round/cost é o número de rotações no algorítmo para gerar a criptografia. Mais segurança.
