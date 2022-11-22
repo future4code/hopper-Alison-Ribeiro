@@ -1,0 +1,51 @@
+### Ping
+GET http://localhost:3003/ping
+
+### Cadastro de Usuário
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+    "name": "Alison Ribeiro",
+    "email": "alison@alison.com",
+    "password": "123456"
+}
+
+### Busca por todos os usuários ou por um usuário específico (nome ou email)
+GET http://localhost:3003/users
+
+###
+GET http://localhost:3003/users?q=alison
+
+### Cadasstro de produtos
+POST http://localhost:3003/products
+Content-Type: application/json
+
+{
+    "name": "Note Book Slim",
+    "price": 3555.00,
+    "image_url": "https://i.picsum.photos/id/0/5616/3744.jpg?hmac=3GAAioiQziMGEtLbfrdbcoenXoWAW-zlyEAMkfEdBzQ"
+}
+
+### Busca por produtos (nome)
+GET http://localhost:3003/products
+
+###
+GET http://localhost:3003/products?q=note
+
+### Registro de compra
+POST http://localhost:3003/purchases
+Content-Type: application/json
+
+{
+    "user_id": "bot6s51n8v5gg7bey96j",
+    "product_id": "fu2qeemucnohsb71jkwx",
+    "quantity": 3
+}
+
+### Busca por compras registradas
+GET http://localhost:3003/users/bot6s51n8v5gg7bey96j/purchases
+
+
+### Buscar por registro
+GET http://localhost:3003/purchases
